@@ -1,0 +1,68 @@
+<span style= "text-align: center">
+<h2>Details for <%=h @batch.name %></h2>
+</span>
+<div id="container">
+<table >
+	<tr>
+	<th>Submit date:</th>
+	<td><%=h @batch.submit_date %></td>	
+	<th>Contact person: </th>
+	<td> <%=h @batch.contact_person %></td>	
+	</tr>	
+	<tr>
+		<th>Group leader: </th>
+		<td><%=h @batch.grp_leader %></td>
+		<th>Batch comment: </th>
+		<td><%=h @batch.batch_comment %></td>
+	</tr>
+</table><br \>
+
+<p>
+<b>Sample Details:</b>
+<ul>
+	<li>Sample Type: <b><%=h @batch.sample_type %></b></li>
+	<li>Extraction Method: <b><%=h @batch.extraction %></b></li>
+	<li>Cleanup Method: <b><%=h @batch.cleanup %></b></li>
+	<li>Resuspension in: <b><%=h @batch.suspension %></b></li>
+</ul>	
+</p>
+<p><b>Sample Collection:</b> <%=h @batch.collect %> </p>
+
+<p>
+<b>Type of Preparation: </b>
+	<%=h @batch.preparation %>	
+</p>
+
+<p>
+<b>Type of Sequencing: </b>
+	<%=h @batch.sequencing %>	
+</p>
+
+<fieldset>
+  <legend>Samples: <%=h @batch.samp_no %></legend>
+<table>
+<tr>
+	  <th>Name  </th> 
+	  <th>Species  </th>
+	  <th> Concentration  </th>
+	  <th>  Volume   </th>
+	  <th> Sample comment  </th>
+</tr>
+	
+	<% for sample in @batch.samples %>
+<ol>
+<tr>
+	  <td><%=h sample.name %></td> 
+	  <td><%=h sample.organism %></td>
+	  <td><%=h sample.ini_conc %></td>
+	  <td><%=h sample.ini_vol %></td>
+	  <td><%=h sample.samp_comment %></td>
+</tr>
+</ol>
+<% end %>
+</table>
+</fieldset>
+</div>
+
+<%= link_to 'Edit', edit_batch_path(@batch) %> |
+<%= link_to 'Back', batches_path %>

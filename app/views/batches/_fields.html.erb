@@ -1,0 +1,83 @@
+<%= error_messages_for :batch %>
+<table border="1">
+	<tr>
+	<th> <%= f.label :Batch_name %></th>
+	<td> <%= f.text_field :name, :size => 25 %> &nbsp;</td>
+	<th> <%= f.label :date %></th>
+	<td><%= f.date_select :submit_date %></td>
+	</tr>
+	<tr>
+		<th> <%= f.label :group_leader %></th>
+		<td><%= f.text_field :grp_leader, :size => 25  %></td>
+		<th><%= f.label :contact_person %></th>
+		<td><%= f.text_field :contact_person, :size => 25  %></td>
+	</tr>	
+</table><br \>
+
+<fieldset>
+<legend>Details of Sample</legend>
+	<ol>
+		<li>
+		<%= f.label :sample_type %>
+		<%= f.radio_button(:sample_type, "gDNA") %>gDNA
+		<%= f.radio_button(:sample_type, "total RNA") %>total RNA
+		<%= f.radio_button(:sample_type, "cDNA") %>cDNA
+		</li><br \>	
+		<li>
+			<%= f.label :extraction_method %>
+			<%= f.text_field :extraction, :size => 25 %>
+		</li><br \>	
+		<li>
+			<%= f.label :cleanup_method %>
+			<%= f.text_field :cleanup, :size => 25 %>
+		</li><br \>	
+		<li>
+			<%= f.label :suspension_in %>
+			<%= f.text_field :suspension, :size => 25 %>
+		</li>
+	</ol>
+</fieldset><br \>
+<ul>
+<li>
+<%= f.label :do_you_want_to_collect_your_samples_after_the_experiment %>
+<%= f.radio_button(:collect, "yes") %>yes
+<%= f.radio_button(:collect, "no") %>no
+
+</li>
+</ul><br \>
+
+
+<fieldset>
+	<legend>Type of Sample preparation required:</legend>
+	<%= f.radio_button(:preparation, "Genomic sequencing") %>Genomic sequencing
+	<%= f.radio_button(:preparation, "mRNA-Seq") %>mRNA-Seq	
+	<%= f.radio_button(:preparation, "Chip-Seq") %>Chip-Seq
+	<%= f.radio_button(:preparation, "small RNA") %>small RNA
+	<%= f.radio_button(:preparation, "Multiplex") %>Multiplex<br \>
+</fieldset><br \>
+
+<fieldset>
+	<legend>Type of Sequencing:</legend>
+	<%= f.radio_button(:sequencing, "Single End Sequencing") %>Single End Sequencing
+	<%= f.radio_button(:sequencing, "Paired End Sequencing") %>Paired End Sequencing
+	<%= f.radio_button(:sequencing, "Bioinformatics") %>Bioinformatics<br \>	
+</fieldset>
+<p>
+	<%= f.label :number_of_samples %><br />
+  	<%= f.text_field :samp_no %>
+</p>
+<fieldset>
+	<legend>Sample Information:</legend>
+		
+<div id="samples">
+	<%= render :partial => 'sample', :collection => @batch.samples %>
+	<%= add_sample_link "Add a sample" %>	
+</div>
+</fieldset>
+
+<p>
+    <%= f.label :batch_comment %><br />
+    <%= f.text_area :batch_comment, :rows => 2 %>
+</p>
+
+

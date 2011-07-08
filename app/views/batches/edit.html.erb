@@ -1,0 +1,11 @@
+<span style= "text-align: center">
+<h2>Editing batch Details</h2>
+</span>
+<div id="container">
+<% form_for :batch, :url => batch_path(@batch), :html => {:method => 'put' } do |f| %>
+
+<%= render :partial => 'fields', :locals => { :f => f } %>
+
+<p><%= submit_tag 'Update Batch' %></p>
+<% end %>
+</div>

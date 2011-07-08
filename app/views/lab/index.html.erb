@@ -1,0 +1,14 @@
+<h2>Batches Today</h2>
+
+<% for batch in @batches -%>
+<div class="entry">
+<h3><%=h batch.name %></h3>
+	<%=h batch.submit_date %>
+	<%=h batch.grp_leader %>
+	<%=h batch.contact_person%>
+	<%=h batch.batch_comment %>
+	<%=h batch.samp_no %>
+	<%= button_to "View Progress", :action => "view_progress", :id => batch %>
+	<%= button_to "View Sample Details", :action => "samp_detail", :id => batch %>
+</div>
+<% end %>
