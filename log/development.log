@@ -5633,3 +5633,32 @@ Processing LabController#view_progress (for 127.0.0.1 at 2011-07-07 10:17:45) [P
 Rendering template within layouts/lab
 Rendering lab/view_progress
 Completed in 17ms (View: 4, DB: 1) | 200 OK [http://localhost/lab/view_progress/23]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-07-08 11:14:49) [GET]
+
+ActionController::RoutingError (No route matches "/home" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-07-08 11:15:06) [GET]
+
+ActionController::RoutingError (No route matches "/home" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-07-08 11:15:08) [GET]
+
+ActionController::RoutingError (No route matches "/home" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-07-08 11:15:22) [GET]
+Rendering pages/home
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/Pages/home]
