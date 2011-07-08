@@ -5662,3 +5662,78 @@ Rendering rescues/layout (not_found)
 Processing PagesController#home (for 127.0.0.1 at 2011-07-08 11:15:22) [GET]
 Rendering pages/home
 Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/Pages/home]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-07-08 11:26:39) [GET]
+Rendering pages/home
+Completed in 52ms (View: 50, DB: 0) | 200 OK [http://localhost/Pages/home]
+
+
+Processing PagesController#contact (for 127.0.0.1 at 2011-07-08 11:35:25) [GET]
+Rendering pages/contact
+Completed in 15ms (View: 14, DB: 0) | 200 OK [http://localhost/Pages/contact]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2011-07-08 11:35:29) [GET]
+Rendering pages/about
+Completed in 27ms (View: 26, DB: 0) | 200 OK [http://localhost/Pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2011-07-08 11:52:03) [GET]
+Rendering template within layouts/application
+Rendering pages/about
+Completed in 170ms (View: 169, DB: 0) | 200 OK [http://localhost/Pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2011-07-08 11:52:28) [GET]
+Rendering template within layouts/application
+Rendering pages/about
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/Pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2011-07-08 11:52:29) [GET]
+Rendering template within layouts/application
+Rendering pages/about
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/Pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2011-07-08 11:52:29) [GET]
+Rendering template within layouts/application
+Rendering pages/about
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/Pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2011-07-08 11:52:29) [GET]
+Rendering template within layouts/application
+Rendering pages/about
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/Pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2011-07-08 11:52:29) [GET]
+Rendering template within layouts/application
+Rendering pages/about
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/Pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2011-07-08 11:52:30) [GET]
+Rendering template within layouts/application
+Rendering pages/about
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/Pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2011-07-08 11:52:30) [GET]
+Rendering template within layouts/application
+Rendering pages/about
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/Pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2011-07-08 11:52:30) [GET]
+Rendering template within layouts/application
+Rendering pages/about
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/Pages/about]
+
+
+Processing PagesController#about (for 127.0.0.1 at 2011-07-08 11:52:30) [GET]
+Rendering template within layouts/application
+Rendering pages/about
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/Pages/about]
