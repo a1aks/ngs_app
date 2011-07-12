@@ -1,23 +1,2 @@
-<div class="sign_up-form">
-<% form_for(@user) do |f| %>
-  <%= f.error_messages %>
-<fieldset>
-	<legend>Enter User Details</legend>
-  <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :user_password, 'Password' %>:<br />
-    <%= f.password_field :password %>
-  </p>
-  <p>
-    <%= f.label :user_password_confirmation, 'Confirm' %><br />
-    <%= f.password_field :password_confirmation %>
-  </p>
-  <p>
-    <%= f.submit 'Add User', :class => "submit" %>
-  </p>
-</fieldset>
-<% end %>
-</div>
+<h1>Users#new</h1>
+<p>Find me in app/views/users/new.html.erb</p>

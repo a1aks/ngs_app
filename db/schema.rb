@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110706133456) do
+ActiveRecord::Schema.define(:version => 20110709165133) do
 
   create_table "batches", :force => true do |t|
     t.string   "name"
@@ -38,24 +38,6 @@ ActiveRecord::Schema.define(:version => 20110706133456) do
     t.decimal  "ini_conc"
     t.decimal  "ini_vol"
     t.string   "samp_comment"
-  end
-
-  create_table "sessions", :force => true do |t|
-    t.string   "session_id", :null => false
-    t.text     "data"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
-  add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
-
-  create_table "users", :force => true do |t|
-    t.string   "email"
-    t.string   "hashed_password"
-    t.string   "salt"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
 end
