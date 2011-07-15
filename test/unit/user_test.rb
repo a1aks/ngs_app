@@ -32,4 +32,41 @@ class UserTest < ActiveSupport::TestCase
    user = User.new(:name => "aks", :email => users(:one).email)
    assert !user.save
   end
+  
+  test "should have encrypted password attribute" do
+    user = User.new(:name => "example",
+                    :email => "example@example.com",
+                    :encrypted_password => "qwedsrftgyh")
+    assert true
+  end
+  
+  # test "encrypted password should not be blank" do
+  #   user = User.new(:name => "example",
+  #                   :email => "example@example.com",
+  #                   :encrypted_password => "")
+  #   assert !user.valid?
+  #   assert user.errors.invalid?(:encrypted_password)
+  # end
+  
+  test "has_password?" do
+    user = User.create
+    assert user.invalid?
+    assert user.errors.invalid?(:password)
+  end
+    
+  # test "should return nil on emial/password mismatch" do
+  #     wrong_password_user = User.authenticate(:email) 
+  #     assert !wrong_password_user.valid?
+  #   end
+  #     
+  #   test "should return nil for an email address with no user" do 
+  #     nonexistent_user = User.authenticate(:email => "bar@foo.com",
+  #                                            :password => "")
+  #     assert !nonexistent_user.valid?
+  #   end
+  #     
+  #    test "should return the user on email/password match" do
+  #       matching_user = User.authenticate(:email, :password)
+  #       assert_equal(User, "matching user equals user")
+  #    end
 end

@@ -10,6 +10,6 @@ class UsersControllerTest < ActionController::TestCase
   # test that new has the right title
   test "should have the right title"do 
   get :new
-  assert_equal "title", /Sign up/
+  assert_equal "title", /sign up/
   end
 end

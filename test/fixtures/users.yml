@@ -3,7 +3,11 @@
 one:
   name: Akshay
   email: aks@gmail.com
+  # password: foobar
+  #   password_confirmation: foobar
 
 two:
   name: Shagun
   email: shagun@gmail.com
+  # password: foobar1
+  #  password_confirmation: foobar1
