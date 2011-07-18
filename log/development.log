@@ -17712,3 +17712,2074 @@ Rendered layouts/_stylesheets (0.5ms)
 Rendered layouts/_header (0.5ms)
 Rendered layouts/_footer (0.2ms)
 Completed in 11ms (View: 9, DB: 1) | 200 OK [http://localhost/signin]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-07-18 15:12:50) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"Shagun@akshay.com"}, "action"=>"create", "controller"=>"sessions"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'Shagun@akshay.com') LIMIT 1[0m
+  [4;35;1mUser Update (2.8ms)[0m   [0mUPDATE "users" SET "updated_at" = '2011-07-18 14:12:50', "remember_token" = 'f4b29f49175ed85abe211bd01eaf55202443de2c67383662ecbf832670d520a8' WHERE "id" = 13[0m
+Redirected to http://localhost:3000/users/13
+Completed in 14ms (DB: 3) | 302 Found [http://localhost/sessions]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-07-18 15:12:50) [GET]
+  Parameters: {"action"=>"show", "id"=>"13", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_stylesheets (0.5ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f4b29f49175ed85abe211bd01eaf55202443de2c67383662ecbf832670d520a8') LIMIT 1[0m
+Rendered layouts/_header (3.9ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/users/13]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 15:12:53) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+
+ActionView::MissingTemplate (Missing template users/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 15:12:59) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+
+ActionView::MissingTemplate (Missing template users/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-07-18 15:14:26) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"Shagun@akshay.com"}, "action"=>"create", "controller"=>"sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'Shagun@akshay.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.4ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f4b29f49175ed85abe211bd01eaf55202443de2c67383662ecbf832670d520a8') LIMIT 1[0m
+Rendered layouts/_header (2.9ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 20ms (View: 9, DB: 1) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-07-18 15:14:37) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"Shagun@akshay.com"}, "action"=>"create", "controller"=>"sessions"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'Shagun@akshay.com') LIMIT 1[0m
+  [4;35;1mUser Update (2.4ms)[0m   [0mUPDATE "users" SET "updated_at" = '2011-07-18 14:14:37', "remember_token" = '5b6aa3bab2501b2d701ee28b50c5d9b7275e6eb45da30963c333258f2548000a' WHERE "id" = 13[0m
+Redirected to http://localhost:3000/users/13
+Completed in 14ms (DB: 3) | 302 Found [http://localhost/sessions]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-07-18 15:14:37) [GET]
+  Parameters: {"action"=>"show", "id"=>"13", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_stylesheets (0.4ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '5b6aa3bab2501b2d701ee28b50c5d9b7275e6eb45da30963c333258f2548000a') LIMIT 1[0m
+Rendered layouts/_header (2.9ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/users/13]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 15:14:41) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+
+ActionView::MissingTemplate (Missing template users/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 15:14:57) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+
+ActionView::MissingTemplate (Missing template users/edit.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 15:16:05) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.5ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '5b6aa3bab2501b2d701ee28b50c5d9b7275e6eb45da30963c333258f2548000a') LIMIT 1[0m
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 25ms (View: 17, DB: 1) | 200 OK [http://localhost/users/13/edit]
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 15:24:41) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/edit
+
+ActionView::TemplateError (undefined method `gravatar_for' for #<ActionView::Base:0x10330fa58>) on line #27 of app/views/users/edit.html.erb:
+24: <% end %>
+25: 
+26: <div>
+27:   <%= gravatar_for @user %>
+28:   <a href="http://gravatar.com/emails">change</a>
+29: </div>
+
+    app/views/users/edit.html.erb:27
+
+Rendered rescues/_trace (37.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 15:24:59) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.5ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '5b6aa3bab2501b2d701ee28b50c5d9b7275e6eb45da30963c333258f2548000a') LIMIT 1[0m
+Rendered layouts/_header (2.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 25ms (View: 16, DB: 1) | 200 OK [http://localhost/users/13/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2011-07-18 15:33:18) [PUT]
+  Parameters: {"commit"=>"Update", "action"=>"update", "_method"=>"put", "id"=>"13", "controller"=>"users", "user"=>{"name"=>"ShagunAkshay", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"Shagun@akshay.com"}}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'shagun@akshay.com' AND "users".id <> 13) LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2011-07-18 14:33:18', "encrypted_password" = '4cec369bdc33561da11dbc4dddb778dc2a939938a2232ea8a3b3da01b96f134c', "salt" = '2800291fb59e5b6fdd3e9db19bd82e288984fe07908b33a813efc8289046aed0' WHERE "id" = 13[0m
+Redirected to http://localhost:3000/users/13
+Completed in 15ms (DB: 1) | 302 Found [http://localhost/users/13]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-07-18 15:33:18) [GET]
+  Parameters: {"action"=>"show", "id"=>"13", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_stylesheets (0.5ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '5b6aa3bab2501b2d701ee28b50c5d9b7275e6eb45da30963c333258f2548000a') LIMIT 1[0m
+Rendered layouts/_header (3.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 17ms (View: 8, DB: 1) | 200 OK [http://localhost/users/13]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 15:33:23) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.5ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '5b6aa3bab2501b2d701ee28b50c5d9b7275e6eb45da30963c333258f2548000a') LIMIT 1[0m
+Rendered layouts/_header (3.3ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://localhost/users/13/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 15:47:59) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '5b6aa3bab2501b2d701ee28b50c5d9b7275e6eb45da30963c333258f2548000a') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://localhost/users/13/edit]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-07-18 15:48:00) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.5ms)
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '5b6aa3bab2501b2d701ee28b50c5d9b7275e6eb45da30963c333258f2548000a') LIMIT 1[0m
+Rendered layouts/_header (8.3ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 84ms (View: 80, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2011-07-18 15:48:03) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/signout]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-07-18 15:48:03) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (0.5ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-07-18 15:48:04) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (0.5ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 12ms (View: 10, DB: 1) | 200 OK [http://localhost/signin]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 15:48:12) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+Redirected to http://localhost:3000/signin
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 2ms (DB: 1) | 302 Found [http://localhost/users/13/edit]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-07-18 15:48:12) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (0.5ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 78ms (View: 76, DB: 1) | 200 OK [http://localhost/signin]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 15:48:18) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+Redirected to http://localhost:3000/signin
+Filter chain halted as [:authenticate] rendered_or_redirected.
+Completed in 2ms (DB: 1) | 302 Found [http://localhost/users/13/edit]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-07-18 15:48:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (0.5ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://localhost/signin]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-07-18 15:48:29) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"Shagun@akshay.com"}, "action"=>"create", "controller"=>"sessions"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'Shagun@akshay.com') LIMIT 1[0m
+  [4;36;1mUser Update (2.9ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2011-07-18 14:48:29', "remember_token" = '9db9b921598aff9d2ce73f10f2d3b1e9119da728f32d082b5944234daf9f7a30' WHERE "id" = 13[0m
+Redirected to http://localhost:3000/users/13
+Completed in 14ms (DB: 3) | 302 Found [http://localhost/sessions]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-07-18 15:48:29) [GET]
+  Parameters: {"action"=>"show", "id"=>"13", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_stylesheets (0.4ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '9db9b921598aff9d2ce73f10f2d3b1e9119da728f32d082b5944234daf9f7a30') LIMIT 1[0m
+Rendered layouts/_header (2.9ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/users/13]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 15:48:32) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '9db9b921598aff9d2ce73f10f2d3b1e9119da728f32d082b5944234daf9f7a30') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/users/13/edit]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2011-07-18 15:48:33) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/signout]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-07-18 15:48:33) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (0.5ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-07-18 16:15:06) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (0.5ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 10ms (View: 8, DB: 1) | 200 OK [http://localhost/signin]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-07-18 16:15:17) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"Shagn@akshay.com"}, "action"=>"create", "controller"=>"sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'Shagn@akshay.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (0.4ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 84ms (View: 8, DB: 1) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-07-18 16:15:27) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"Shagun@akshay.com"}, "action"=>"create", "controller"=>"sessions"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'Shagun@akshay.com') LIMIT 1[0m
+  [4;35;1mUser Update (2.7ms)[0m   [0mUPDATE "users" SET "updated_at" = '2011-07-18 15:15:27', "remember_token" = 'fd50e0ed45913e35ff5daf5cc4e0ef08d3d499ac9e1d03f1a6144530a5f313dc' WHERE "id" = 13[0m
+Redirected to http://localhost:3000/users/13
+Completed in 14ms (DB: 3) | 302 Found [http://localhost/sessions]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-07-18 16:15:27) [GET]
+  Parameters: {"action"=>"show", "id"=>"13", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_stylesheets (0.5ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'fd50e0ed45913e35ff5daf5cc4e0ef08d3d499ac9e1d03f1a6144530a5f313dc') LIMIT 1[0m
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/users/13]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 16:15:29) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'fd50e0ed45913e35ff5daf5cc4e0ef08d3d499ac9e1d03f1a6144530a5f313dc') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/users/13/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 16:15:32) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'fd50e0ed45913e35ff5daf5cc4e0ef08d3d499ac9e1d03f1a6144530a5f313dc') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.9ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://localhost/users/13/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 16:15:32) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'fd50e0ed45913e35ff5daf5cc4e0ef08d3d499ac9e1d03f1a6144530a5f313dc') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 22ms (View: 14, DB: 1) | 200 OK [http://localhost/users/13/edit]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2011-07-18 16:15:33) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/signout]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-07-18 16:15:33) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (0.5ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-07-18 16:15:35) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (0.5ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-07-18 16:15:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (0.5ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-07-18 16:15:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.6ms)
+Rendered layouts/_header (0.5ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 12ms (View: 10, DB: 1) | 200 OK [http://localhost/signin]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-07-18 16:29:36) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (0.5ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 10ms (View: 8, DB: 1) | 200 OK [http://localhost/signin]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-07-18 16:37:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (0.5ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 11ms (View: 8, DB: 1) | 200 OK [http://localhost/signin]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-07-18 16:37:55) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (0.5ms)
+Rendered layouts/_footer (1.9ms)
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-07-18 16:37:56) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (0.5ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://localhost/signin]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-07-18 16:38:06) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"Shagun@akshay.com"}, "action"=>"create", "controller"=>"sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'Shagun@akshay.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (0.4ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 18ms (View: 7, DB: 1) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-07-18 16:43:11) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"Shagun@akshay.com"}, "action"=>"create", "controller"=>"sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'Shagun@akshay.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (0.4ms)
+Rendered layouts/_footer (0.1ms)
+Completed in 17ms (View: 7, DB: 1) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-07-18 16:43:22) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"Shagun@akshay.com"}, "action"=>"create", "controller"=>"sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'Shagun@akshay.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.7ms)[0m   [0mUPDATE "users" SET "updated_at" = '2011-07-18 15:43:22', "remember_token" = 'f5115b0b7561a68f10482eafbdff3f680bd961aa0156d1a4edadd4d6156678d5' WHERE "id" = 13[0m
+Redirected to http://localhost:3000/users/13
+Completed in 14ms (DB: 2) | 302 Found [http://localhost/sessions]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-07-18 16:43:22) [GET]
+  Parameters: {"action"=>"show", "id"=>"13", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_stylesheets (0.5ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f5115b0b7561a68f10482eafbdff3f680bd961aa0156d1a4edadd4d6156678d5') LIMIT 1[0m
+Rendered layouts/_header (3.3ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 17ms (View: 9, DB: 1) | 200 OK [http://localhost/users/13]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 16:43:30) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f5115b0b7561a68f10482eafbdff3f680bd961aa0156d1a4edadd4d6156678d5') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.8ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 87ms (View: 79, DB: 1) | 200 OK [http://localhost/users/13/edit]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-07-18 16:43:31) [GET]
+  Parameters: {"action"=>"show", "id"=>"13", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_stylesheets (0.5ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f5115b0b7561a68f10482eafbdff3f680bd961aa0156d1a4edadd4d6156678d5') LIMIT 1[0m
+Rendered layouts/_header (3.1ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 16ms (View: 8, DB: 1) | 200 OK [http://localhost/users/13]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-07-18 16:43:32) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.5ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f5115b0b7561a68f10482eafbdff3f680bd961aa0156d1a4edadd4d6156678d5') LIMIT 1[0m
+Rendered layouts/_header (8.5ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 15ms (View: 13, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-07-18 16:43:33) [GET]
+  Parameters: {"action"=>"show", "id"=>"13", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_stylesheets (0.4ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f5115b0b7561a68f10482eafbdff3f680bd961aa0156d1a4edadd4d6156678d5') LIMIT 1[0m
+Rendered layouts/_header (3.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/users/13]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 16:43:33) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f5115b0b7561a68f10482eafbdff3f680bd961aa0156d1a4edadd4d6156678d5') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/users/13/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 16:43:34) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f5115b0b7561a68f10482eafbdff3f680bd961aa0156d1a4edadd4d6156678d5') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 21ms (View: 11, DB: 1) | 200 OK [http://localhost/users/13/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 16:43:34) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f5115b0b7561a68f10482eafbdff3f680bd961aa0156d1a4edadd4d6156678d5') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 22ms (View: 12, DB: 1) | 200 OK [http://localhost/users/13/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 16:43:34) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f5115b0b7561a68f10482eafbdff3f680bd961aa0156d1a4edadd4d6156678d5') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/users/13/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2011-07-18 16:43:37) [PUT]
+  Parameters: {"commit"=>"Update", "action"=>"update", "_method"=>"put", "id"=>"13", "controller"=>"users", "user"=>{"name"=>"ShagunAkshay", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"Shagun@akshay.com"}}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f5115b0b7561a68f10482eafbdff3f680bd961aa0156d1a4edadd4d6156678d5') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'shagun@akshay.com' AND "users".id <> 13) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 27ms (View: 15, DB: 1) | 200 OK [http://localhost/users/13]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 16:43:45) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f5115b0b7561a68f10482eafbdff3f680bd961aa0156d1a4edadd4d6156678d5') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://localhost/users/13/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 16:51:44) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f5115b0b7561a68f10482eafbdff3f680bd961aa0156d1a4edadd4d6156678d5') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/users/13/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 16:52:22) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f5115b0b7561a68f10482eafbdff3f680bd961aa0156d1a4edadd4d6156678d5') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (2.5ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 24ms (View: 15, DB: 2) | 200 OK [http://localhost/users/13/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 16:52:23) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f5115b0b7561a68f10482eafbdff3f680bd961aa0156d1a4edadd4d6156678d5') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://localhost/users/13/edit]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-07-18 16:52:41) [GET]
+  Parameters: {"action"=>"show", "id"=>"13", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_stylesheets (0.5ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f5115b0b7561a68f10482eafbdff3f680bd961aa0156d1a4edadd4d6156678d5') LIMIT 1[0m
+Rendered layouts/_header (3.1ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 18ms (View: 8, DB: 1) | 200 OK [http://localhost/users/13]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-07-18 16:52:43) [GET]
+  Parameters: {"action"=>"show", "id"=>"13", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_stylesheets (0.5ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f5115b0b7561a68f10482eafbdff3f680bd961aa0156d1a4edadd4d6156678d5') LIMIT 1[0m
+Rendered layouts/_header (3.3ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 17ms (View: 9, DB: 1) | 200 OK [http://localhost/users/13]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-07-18 16:52:44) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.5ms)
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f5115b0b7561a68f10482eafbdff3f680bd961aa0156d1a4edadd4d6156678d5') LIMIT 1[0m
+Rendered layouts/_header (7.8ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-07-18 16:52:45) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.5ms)
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f5115b0b7561a68f10482eafbdff3f680bd961aa0156d1a4edadd4d6156678d5') LIMIT 1[0m
+Rendered layouts/_header (8.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 15ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-07-18 16:53:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.5ms)
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f5115b0b7561a68f10482eafbdff3f680bd961aa0156d1a4edadd4d6156678d5') LIMIT 1[0m
+Rendered layouts/_header (8.8ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 21ms (View: 19, DB: 0) | 200 OK [http://localhost/signin]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-07-18 16:53:42) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.4ms)
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f5115b0b7561a68f10482eafbdff3f680bd961aa0156d1a4edadd4d6156678d5') LIMIT 1[0m
+Rendered layouts/_header (8.3ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-07-18 16:53:44) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered layouts/_stylesheets (0.5ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f5115b0b7561a68f10482eafbdff3f680bd961aa0156d1a4edadd4d6156678d5') LIMIT 1[0m
+Rendered layouts/_header (2.9ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/signup]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-07-18 16:53:47) [GET]
+  Parameters: {"action"=>"show", "id"=>"13", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_stylesheets (0.5ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f5115b0b7561a68f10482eafbdff3f680bd961aa0156d1a4edadd4d6156678d5') LIMIT 1[0m
+Rendered layouts/_header (3.1ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 16ms (View: 8, DB: 1) | 200 OK [http://localhost/users/13]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 16:53:47) [GET]
+  Parameters: {"action"=>"edit", "id"=>"13", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'f5115b0b7561a68f10482eafbdff3f680bd961aa0156d1a4edadd4d6156678d5') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 20ms (View: 11, DB: 1) | 200 OK [http://localhost/users/13/edit]
+
+
+Processing PagesController#help (for 127.0.0.1 at 2011-07-18 16:53:48) [GET]
+  Parameters: {"action"=>"help", "controller"=>"pages"}
+
+ActionController::UnknownAction (No action responded to help. Actions: about, clear_return_to, contact, current_user, current_user=, current_user?, deny_access, home, redirect_back_or, sign_in, sign_out, signed_in?, store_location, and user_from_remember_token):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2011-07-18 16:53:51) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/signout]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-07-18 16:53:51) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (0.9ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 52ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-07-18 16:53:52) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (0.5ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PagesController#help (for 127.0.0.1 at 2011-07-18 16:53:53) [GET]
+  Parameters: {"action"=>"help", "controller"=>"pages"}
+
+ActionController::UnknownAction (No action responded to help. Actions: about, clear_return_to, contact, current_user, current_user=, current_user?, deny_access, home, redirect_back_or, sign_in, sign_out, signed_in?, store_location, and user_from_remember_token):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-07-18 16:53:55) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (0.5ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 9ms (View: 7, DB: 1) | 200 OK [http://localhost/signin]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-07-18 16:54:06) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"Shagun@akshay.com"}, "action"=>"create", "controller"=>"sessions"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'Shagun@akshay.com') LIMIT 1[0m
+  [4;36;1mUser Update (1.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2011-07-18 15:54:06', "remember_token" = 'd1eb3f27e90d78ef80ccf1ca741bdf1d4188c9d7bb98e122a5ec389ca669029f' WHERE "id" = 13[0m
+Redirected to http://localhost:3000/users/13
+Completed in 12ms (DB: 2) | 302 Found [http://localhost/sessions]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-07-18 16:54:06) [GET]
+  Parameters: {"action"=>"show", "id"=>"13", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_stylesheets (0.5ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd1eb3f27e90d78ef80ccf1ca741bdf1d4188c9d7bb98e122a5ec389ca669029f') LIMIT 1[0m
+Rendered layouts/_header (3.3ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 16ms (View: 8, DB: 1) | 200 OK [http://localhost/users/13]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 16:54:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd1eb3f27e90d78ef80ccf1ca741bdf1d4188c9d7bb98e122a5ec389ca669029f') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #4 of app/views/users/index.html.erb:
+1: <h2>All users</h2>
+2: 
+3: <ul class="users">
+4:   <% @users.each do |user| %>
+5:     <li>
+6:       <%= link_to h(user.name), user %>
+7:     </li>
+
+    app/views/users/index.html.erb:4
+
+Rendered rescues/_trace (108.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 16:54:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd1eb3f27e90d78ef80ccf1ca741bdf1d4188c9d7bb98e122a5ec389ca669029f') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #4 of app/views/users/index.html.erb:
+1: <h2>All users</h2>
+2: 
+3: <ul class="users">
+4:   <% @users.each do |user| %>
+5:     <li>
+6:       <%= link_to h(user.name), user %>
+7:     </li>
+
+    app/views/users/index.html.erb:4
+
+Rendered rescues/_trace (34.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 16:55:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd1eb3f27e90d78ef80ccf1ca741bdf1d4188c9d7bb98e122a5ec389ca669029f') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #4 of app/views/users/index.html.erb:
+1: <h2>All users</h2>
+2: 
+3: <ul class="users">
+4:   <% @users.each do |user| %>
+5:     <li>
+6:       <%= gravatar_for user, :size => 30 %>
+7:       <%= link_to h(user.name), user %>
+
+    app/views/users/index.html.erb:4
+
+Rendered rescues/_trace (115.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-07-18 16:55:22) [GET]
+  Parameters: {"action"=>"show", "id"=>"13", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_stylesheets (0.5ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd1eb3f27e90d78ef80ccf1ca741bdf1d4188c9d7bb98e122a5ec389ca669029f') LIMIT 1[0m
+Rendered layouts/_header (3.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 18ms (View: 8, DB: 1) | 200 OK [http://localhost/users/13]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 16:55:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd1eb3f27e90d78ef80ccf1ca741bdf1d4188c9d7bb98e122a5ec389ca669029f') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #4 of app/views/users/index.html.erb:
+1: <h2>All users</h2>
+2: 
+3: <ul class="users">
+4:   <% @users.each do |user| %>
+5:     <li>
+6:       <%= gravatar_for user, :size => 30 %>
+7:       <%= link_to h(user.name), user %>
+
+    app/views/users/index.html.erb:4
+
+Rendered rescues/_trace (111.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 16:58:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd1eb3f27e90d78ef80ccf1ca741bdf1d4188c9d7bb98e122a5ec389ca669029f') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #4 of app/views/users/index.html.erb:
+1: <h2>All users</h2>
+2: 
+3: <ul class="users">
+4:   <% @users.each do |user| %>
+5:     <li>
+6: 	 <%= link_to h(user.name), user %>
+7:     </li>
+
+    app/views/users/index.html.erb:4
+
+Rendered rescues/_trace (35.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 16:58:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd1eb3f27e90d78ef80ccf1ca741bdf1d4188c9d7bb98e122a5ec389ca669029f') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #4 of app/views/users/index.html.erb:
+1: <h2>All users</h2>
+2: 
+3: <ul class="users">
+4:   <% @users.each do |user| %>
+5:     <li>
+6: 	 <%= link_to h(user.name), user %>
+7:     </li>
+
+    app/views/users/index.html.erb:4
+
+Rendered rescues/_trace (35.1ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-07-18 16:58:49) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.5ms)
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd1eb3f27e90d78ef80ccf1ca741bdf1d4188c9d7bb98e122a5ec389ca669029f') LIMIT 1[0m
+Rendered layouts/_header (8.1ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2011-07-18 16:58:50) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/signout]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-07-18 16:58:50) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (0.6ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 81ms (View: 79, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-07-18 16:58:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (0.5ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 12ms (View: 8, DB: 2) | 200 OK [http://localhost/signin]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-07-18 16:59:07) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"rohini@ashok.com"}, "action"=>"create", "controller"=>"sessions"}
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'rohini@ashok.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.7ms)[0m   [0mUPDATE "users" SET "updated_at" = '2011-07-18 15:59:07', "remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93' WHERE "id" = 14[0m
+Redirected to http://localhost:3000/users/14
+Completed in 14ms (DB: 2) | 302 Found [http://localhost/sessions]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-07-18 16:59:07) [GET]
+  Parameters: {"action"=>"show", "id"=>"14", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_stylesheets (0.5ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+Rendered layouts/_header (3.1ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/users/14]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-07-18 16:59:10) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.5ms)
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+Rendered layouts/_header (75.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 82ms (View: 80, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-07-18 16:59:11) [GET]
+  Parameters: {"action"=>"show", "id"=>"14", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_stylesheets (0.5ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+Rendered layouts/_header (3.1ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 16ms (View: 8, DB: 1) | 200 OK [http://localhost/users/14]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 16:59:13) [GET]
+  Parameters: {"action"=>"edit", "id"=>"14", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (2.0ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 22ms (View: 11, DB: 1) | 200 OK [http://localhost/users/14/edit]
+
+
+Processing PagesController#help (for 127.0.0.1 at 2011-07-18 16:59:14) [GET]
+  Parameters: {"action"=>"help", "controller"=>"pages"}
+
+ActionController::UnknownAction (No action responded to help. Actions: about, clear_return_to, contact, current_user, current_user=, current_user?, deny_access, home, redirect_back_or, sign_in, sign_out, signed_in?, store_location, and user_from_remember_token):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 16:59:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #4 of app/views/users/index.html.erb:
+1: <h2>All users</h2>
+2: 
+3: <ul class="users">
+4:   <% @users.each do |user| %>
+5:     <li>
+6: 	 <%= link_to h(user.name), user %>
+7:     </li>
+
+    app/views/users/index.html.erb:4
+
+Rendered rescues/_trace (34.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 17:05:38) [GET]
+  Parameters: {"action"=>"edit", "id"=>"14", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (2.0ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://localhost/users/14/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 17:05:38) [GET]
+  Parameters: {"action"=>"edit", "id"=>"14", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.9ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 94ms (View: 87, DB: 1) | 200 OK [http://localhost/users/14/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 17:05:39) [GET]
+  Parameters: {"action"=>"edit", "id"=>"14", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://localhost/users/14/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 17:05:39) [GET]
+  Parameters: {"action"=>"edit", "id"=>"14", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.8ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/users/14/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 17:05:39) [GET]
+  Parameters: {"action"=>"edit", "id"=>"14", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (2.1ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 89ms (View: 81, DB: 1) | 200 OK [http://localhost/users/14/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 17:05:40) [GET]
+  Parameters: {"action"=>"edit", "id"=>"14", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/users/14/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 17:05:40) [GET]
+  Parameters: {"action"=>"edit", "id"=>"14", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/users/14/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 17:05:41) [GET]
+  Parameters: {"action"=>"edit", "id"=>"14", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.6ms)
+Rendered layouts/_header (1.8ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 88ms (View: 80, DB: 1) | 200 OK [http://localhost/users/14/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 17:05:41) [GET]
+  Parameters: {"action"=>"edit", "id"=>"14", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://localhost/users/14/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 17:05:41) [GET]
+  Parameters: {"action"=>"edit", "id"=>"14", "controller"=>"users"}
+  [4;36;1mUser Load (2.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.9ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 28ms (View: 12, DB: 4) | 200 OK [http://localhost/users/14/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 17:05:41) [GET]
+  Parameters: {"action"=>"edit", "id"=>"14", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (2.6ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 20ms (View: 13, DB: 1) | 200 OK [http://localhost/users/14/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 17:05:42) [GET]
+  Parameters: {"action"=>"edit", "id"=>"14", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.9ms)
+Rendered layouts/_header (1.8ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://localhost/users/14/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 17:05:42) [GET]
+  Parameters: {"action"=>"edit", "id"=>"14", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://localhost/users/14/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 17:05:42) [GET]
+  Parameters: {"action"=>"edit", "id"=>"14", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 20ms (View: 11, DB: 1) | 200 OK [http://localhost/users/14/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 17:05:42) [GET]
+  Parameters: {"action"=>"edit", "id"=>"14", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (2.0ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 94ms (View: 86, DB: 1) | 200 OK [http://localhost/users/14/edit]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 17:05:42) [GET]
+  Parameters: {"action"=>"edit", "id"=>"14", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/users/14/edit]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:05:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #4 of app/views/users/index.html.erb:
+1: <h2>All users</h2>
+2: 
+3: <ul class="users">
+4:   <% @users.each do |user| %>
+5:     <li>
+6:       <%= link_to h(user.name), user %>
+7:     </li>
+
+    app/views/users/index.html.erb:4
+
+Rendered rescues/_trace (108.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 17:14:08) [GET]
+  Parameters: {"action"=>"edit", "id"=>"14", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 20ms (View: 11, DB: 1) | 200 OK [http://localhost/users/14/edit]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:14:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #4 of app/views/users/index.html.erb:
+1: <h2>All users</h2>
+2: 
+3: <ul class="users">
+4:   <% @users.each do |user| %>
+5:     <li>
+6:       <%= link_to h(user.name), user %>
+7:     </li>
+
+    app/views/users/index.html.erb:4
+
+Rendered rescues/_trace (110.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2011-07-18 17:17:35) [GET]
+  Parameters: {"action"=>"edit", "id"=>"14", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 14) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://localhost/users/14/edit]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:17:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 20ms (View: 11, DB: 2) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-07-18 17:19:17) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_stylesheets (0.5ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+Rendered layouts/_header (3.1ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 16ms (View: 8, DB: 1) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:19:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.8ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 20ms (View: 11, DB: 2) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-07-18 17:19:21) [GET]
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_stylesheets (0.5ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+Rendered layouts/_header (3.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/users/4]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:19:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 19ms (View: 10, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-07-18 17:19:23) [GET]
+  Parameters: {"action"=>"show", "id"=>"4", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_stylesheets (0.6ms)
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+Rendered layouts/_header (3.5ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 86ms (View: 79, DB: 1) | 200 OK [http://localhost/users/4]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:19:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 21ms (View: 10, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-07-18 17:19:25) [GET]
+  Parameters: {"action"=>"show", "id"=>"7", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_stylesheets (0.4ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+Rendered layouts/_header (3.0ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 14ms (View: 8, DB: 1) | 200 OK [http://localhost/users/7]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:19:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.8ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 22ms (View: 11, DB: 2) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-07-18 17:19:29) [GET]
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_stylesheets (0.5ms)
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+Rendered layouts/_header (3.1ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 16ms (View: 8, DB: 1) | 200 OK [http://localhost/users/11]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:19:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.9ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 22ms (View: 11, DB: 2) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:19:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+
+ActionView::TemplateError (undefined method `gravatar_for' for #<ActionView::Base:0x10338a258>) on line #6 of app/views/users/index.html.erb:
+3: <ul class="users">
+4:   <% @users.each do |user| %>
+5:     <li>
+6: 	 <%= gravatar_for user, :size => 30 %>
+7:       <%= link_to h(user.name), user %>
+8:     </li>
+9:   <% end %>
+
+    app/views/users/index.html.erb:6
+    app/views/users/index.html.erb:4:in `each'
+    app/views/users/index.html.erb:4
+
+Rendered rescues/_trace (37.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:19:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 24ms (View: 13, DB: 2) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBatches (20110701102905)
+Migrating to CreateSamples (20110701102943)
+Migrating to AddMajorToBatch (20110702112726)
+Migrating to AddSecondToBatch (20110702114332)
+Migrating to AddThirdToBatch (20110702121549)
+Migrating to AddThingsToSample (20110702140239)
+Migrating to AddCollectToBatch (20110702152849)
+Migrating to AddNoToBatch (20110702153404)
+Migrating to CreateUsers (20110712131056)
+Migrating to AddEmailUniquenessIndex (20110713105900)
+Migrating to AddPasswordToUsers (20110713131719)
+Migrating to AddSaltToUsers (20110713140848)
+Migrating to CreateSessions (20110715123907)
+Migrating to AddRememberTokenToUsers (20110718102603)
+Migrating to AddAdminToUsers (20110718162646)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "users" ADD "admin" boolean DEFAULT 'f'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110718162646')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("batches")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("samples")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("sessions")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_users_on_remember_token')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_users_on_email')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "batches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "submit_date" date, "grp_leader" varchar(255), "contact_person" varchar(255), "batch_comment" text, "sample_type" varchar(255), "extraction" varchar(255), "cleanup" varchar(255), "suspension" varchar(255), "preparation" varchar(255), "sequencing" varchar(255), "collect" varchar(255), "samp_no" integer) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE TABLE "samples" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "batch_id" integer, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "organism" varchar(255), "ini_conc" decimal, "ini_vol" decimal, "samp_comment" varchar(255)) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mCREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("sessions")[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("sessions")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime, "encrypted_password" varchar(255), "salt" varchar(255), "remember_token" varchar(255), "admin" boolean DEFAULT 'f') [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_users_on_email')[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE INDEX "index_users_on_remember_token" ON "users" ("remember_token")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20110718162646')[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110701102905')[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20110701102943')[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110702112726')[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20110702114332')[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110702121549')[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20110702140239')[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110702152849')[0m
+  [4;35;1mSQL (3.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20110702153404')[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110712131056')[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20110713105900')[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110713131719')[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20110713140848')[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110715123907')[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20110718102603')[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2011-07-18 16:31:24', "admin" = 't' WHERE "id" = 13[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:35:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+ERROR: compiling _run_erb_app47views47users47index46html46erb RAISED compile error
+/Users/Aks/Ruby/project/ngs_app/app/views/users/index.html.erb:12: syntax error, unexpected kENSURE, expecting kEND
+/Users/Aks/Ruby/project/ngs_app/app/views/users/index.html.erb:14: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47users47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h2>All users</h2>\n\n<ul class=\"users\">\n  "
+
+
+;  @users.each do |user| ; @output_buffer.concat "\n    <li>\n      "
+
+; @output_buffer.concat(( link_to h(user.name), user ).to_s); @output_buffer.concat "\n\t"
+;  if current_user.admin? ; @output_buffer.concat "\n\t| "
+; @output_buffer.concat(( link_to "delete", user, :method => :delete, :confirm => "You sure?" ).to_s); @output_buffer.concat "\n    </li>\n  "
+
+;  end ; @output_buffer.concat "\n</ul>"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/Aks/Ruby/project/ngs_app/app/views/users/index.html.erb:14:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_view/template.rb:205:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_view/base.rb:265:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_view/base.rb:348:in `_render_with_layout'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_view/base.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/base.rb:1250:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/base.rb:936:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.9/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.9/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/benchmarking.rb:51:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/base.rb:1326:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.9/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.9/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/flash.rb:151:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/base.rb:532:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/base.rb:532:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/routing/route_set.rb:438:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/dispatcher.rb:121:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/string_coercion.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/session/abstract_store.rb:177:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.9/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.9/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.9/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.9/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.9/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/failsafe.rb:26:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/dispatcher.rb:114:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/reloader.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.9/lib/action_controller/dispatcher.rb:108:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.9/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/urlmap.rb:47:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/urlmap.rb:41:in `each'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/urlmap.rb:41:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.9/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/handler/mongrel.rb:67:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/rack-1.1.2/lib/rack/handler/mongrel.rb:38:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.9/lib/commands/server.rb:111
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/Aks/Ruby/project/ngs_app/app/views/users/index.html.erb:12: syntax error, unexpected kENSURE, expecting kEND
+/Users/Aks/Ruby/project/ngs_app/app/views/users/index.html.erb:14: syntax error, unexpected $end, expecting kEND) on line #12 of app/views/users/index.html.erb:
+9:     </li>
+10:   <% end %>
+11: </ul>
+
+    app/views/users/index.html.erb:14:in `compile!'
+
+Rendered rescues/_trace (113.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:36:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 25ms (View: 14, DB: 2) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:36:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 20ms (View: 10, DB: 2) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:36:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 23ms (View: 14, DB: 2) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:36:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 20ms (View: 10, DB: 2) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:36:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (2.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.9ms)
+Rendered layouts/_footer (0.3ms)
+Completed in 28ms (View: 14, DB: 4) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:36:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 21ms (View: 11, DB: 2) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:36:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 21ms (View: 11, DB: 2) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:36:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 19ms (View: 10, DB: 2) | 200 OK [http://localhost/users]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-07-18 17:36:51) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (2.0ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'd2735460dfe6603226a8caab5fa08b897443c8d6aab08bc852c4b8404eb31a93') LIMIT 1[0m
+Rendered layouts/_header (81.8ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 90ms (View: 88, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2011-07-18 17:36:54) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/signout]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2011-07-18 17:36:54) [GET]
+  Parameters: {"action"=>"home", "controller"=>"pages"}
+Rendering template within layouts/application
+Rendering pages/home
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (0.4ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-07-18 17:36:55) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (0.5ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 9ms (View: 8, DB: 1) | 200 OK [http://localhost/signin]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-07-18 17:37:05) [POST]
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"Shagun@akshay.com"}, "action"=>"create", "controller"=>"sessions"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'Shagun@akshay.com') LIMIT 1[0m
+  [4;36;1mUser Update (1.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2011-07-18 16:37:05', "remember_token" = 'a78d2022d46cf85081d93cfb6eaaa88e7430f643dc14df70a9eaaf14b5ec8ecb' WHERE "id" = 13[0m
+Redirected to http://localhost:3000/users/13
+Completed in 13ms (DB: 2) | 302 Found [http://localhost/sessions]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-07-18 17:37:05) [GET]
+  Parameters: {"action"=>"show", "id"=>"13", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_stylesheets (0.5ms)
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'a78d2022d46cf85081d93cfb6eaaa88e7430f643dc14df70a9eaaf14b5ec8ecb') LIMIT 1[0m
+Rendered layouts/_header (3.2ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 83ms (View: 8, DB: 1) | 200 OK [http://localhost/users/13]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:37:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'a78d2022d46cf85081d93cfb6eaaa88e7430f643dc14df70a9eaaf14b5ec8ecb') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 34ms (View: 25, DB: 2) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2011-07-18 17:39:53) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "id"=>"9", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'a78d2022d46cf85081d93cfb6eaaa88e7430f643dc14df70a9eaaf14b5ec8ecb') LIMIT 1[0m
+
+ActionController::UnknownAction (No action responded to destroy. Actions: clear_return_to, create, current_user, current_user=, current_user?, deny_access, edit, index, new, redirect_back_or, show, sign_in, sign_out, signed_in?, store_location, update, and user_from_remember_token):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2011-07-18 17:39:59) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "id"=>"9", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'a78d2022d46cf85081d93cfb6eaaa88e7430f643dc14df70a9eaaf14b5ec8ecb') LIMIT 1[0m
+
+ActionController::UnknownAction (No action responded to destroy. Actions: clear_return_to, create, current_user, current_user=, current_user?, deny_access, edit, index, new, redirect_back_or, show, sign_in, sign_out, signed_in?, store_location, update, and user_from_remember_token):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2011-07-18 17:40:02) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "id"=>"9", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'a78d2022d46cf85081d93cfb6eaaa88e7430f643dc14df70a9eaaf14b5ec8ecb') LIMIT 1[0m
+
+ActionController::UnknownAction (No action responded to destroy. Actions: clear_return_to, create, current_user, current_user=, current_user?, deny_access, edit, index, new, redirect_back_or, show, sign_in, sign_out, signed_in?, store_location, update, and user_from_remember_token):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:40:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'a78d2022d46cf85081d93cfb6eaaa88e7430f643dc14df70a9eaaf14b5ec8ecb') LIMIT 1[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 35ms (View: 25, DB: 2) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:40:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'a78d2022d46cf85081d93cfb6eaaa88e7430f643dc14df70a9eaaf14b5ec8ecb') LIMIT 1[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 36ms (View: 25, DB: 2) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2011-07-18 17:40:29) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "id"=>"10", "controller"=>"users"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'a78d2022d46cf85081d93cfb6eaaa88e7430f643dc14df70a9eaaf14b5ec8ecb') LIMIT 1[0m
+
+ActionController::UnknownAction (No action responded to destroy. Actions: clear_return_to, create, current_user, current_user=, current_user?, deny_access, edit, index, new, redirect_back_or, show, sign_in, sign_out, signed_in?, store_location, update, and user_from_remember_token):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:41:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'a78d2022d46cf85081d93cfb6eaaa88e7430f643dc14df70a9eaaf14b5ec8ecb') LIMIT 1[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 37ms (View: 25, DB: 2) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:41:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'a78d2022d46cf85081d93cfb6eaaa88e7430f643dc14df70a9eaaf14b5ec8ecb') LIMIT 1[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered layouts/_stylesheets (0.5ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 34ms (View: 25, DB: 2) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2011-07-18 17:41:51) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "id"=>"9", "controller"=>"users"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'a78d2022d46cf85081d93cfb6eaaa88e7430f643dc14df70a9eaaf14b5ec8ecb') LIMIT 1[0m
+
+ActionController::UnknownAction (No action responded to destroy. Actions: clear_return_to, create, current_user, current_user=, current_user?, deny_access, edit, index, new, redirect_back_or, show, sign_in, sign_out, signed_in?, store_location, update, and user_from_remember_token):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:44:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'a78d2022d46cf85081d93cfb6eaaa88e7430f643dc14df70a9eaaf14b5ec8ecb') LIMIT 1[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.7ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 36ms (View: 25, DB: 2) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2011-07-18 17:44:28) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "id"=>"9", "controller"=>"users"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = 'a78d2022d46cf85081d93cfb6eaaa88e7430f643dc14df70a9eaaf14b5ec8ecb') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mUser Destroy (0.3ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 9[0m
+Redirected to http://localhost:3000/users
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/users/9]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-18 17:44:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'a78d2022d46cf85081d93cfb6eaaa88e7430f643dc14df70a9eaaf14b5ec8ecb') LIMIT 1[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Rendered layouts/_stylesheets (0.4ms)
+Rendered layouts/_header (1.6ms)
+Rendered layouts/_footer (0.2ms)
+Completed in 32ms (View: 24, DB: 1) | 200 OK [http://localhost/users]

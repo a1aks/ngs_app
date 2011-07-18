@@ -156,3 +156,14 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
+
+/*for listing the users for administrator*/
+ul.users 
+{
+  margin-top: 1em;
+}
+
+.users li 
+{
+  list-style: none;
+}
