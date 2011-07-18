@@ -1,11 +1,13 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.resources :batches
+  map.resources :sessions, :only => [:new, :create, :destroy]
   map.contact '/contact', :controller => 'pages', :action => 'contact'
   map.about '/about', :controller => 'pages', :action => 'about'
-  map.help '/help', :controller => 'pages', :action => 'help'  
-  
+  map.help '/help', :controller => 'pages', :action => 'help'    
   map.signup '/signup',   :controller => 'users', :action => 'new'
+  map.signin  '/signin',  :controller => 'sessions', :action => 'new'
+  map.signout '/signout', :controller => 'sessions', :action => 'destroy'
   
 
   # The priority is based upon order of creation: first created -> highest priority.

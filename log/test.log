@@ -517,3 +517,13 @@ Rendered layouts/_stylesheets (0.3ms)
 Rendered layouts/_header (0.3ms)
 Rendered layouts/_footer (0.1ms)
 Completed in 4ms (View: 4, DB: 0) | 200 OK [http://test.host/users/new]
+
+
+Processing SessionsController#new (for 0.0.0.0 at 2011-07-18 14:09:41) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered layouts/_stylesheets (0.8ms)
+Rendered layouts/_header (0.9ms)
+Rendered layouts/_footer (0.4ms)
+Completed in 11ms (View: 9, DB: 1) | 200 OK [http://test.host/sessions/new]
