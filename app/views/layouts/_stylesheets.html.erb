@@ -3,3 +3,8 @@
 <!-- This works for versions < IE 8 -->
 <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
 <%= stylesheet_link_tag 'custom', :media => 'screen' %>
+
+<!--  This is for the printing option  -->
+
+<%= stylesheet_link_tag('default', :media => :screen) %>
+<%= stylesheet_link_tag('print', :media => :print)%>

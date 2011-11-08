@@ -1,6 +1,6 @@
 <h2>Sign in</h2>
 
-<% form_for(:session, :url => sessions_path) do |f| %>
+<% simple_form_for(:session, :url => sessions_path) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.text_field :email %>
@@ -15,3 +15,5 @@
 <% end %>
 
 <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+
+<%= link_to 'Forgot Password', forgot_password_path, :class => 'popup' %>

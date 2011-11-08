@@ -14,4 +14,18 @@ config.action_view.debug_rjs                         = true
 config.action_controller.perform_caching             = false
 
 # Don't care if the mailer can't send
-config.action_mailer.raise_delivery_errors = false
+config.action_mailer.raise_delivery_errors = true
+# Dilivery Method 
+config.action_mailer.delivery_method = :smtp
+# smtp settings(Perfectly configured [Don't Change])
+config.action_mailer.smtp_settings = {
+  :enable_starttls_auto => true,
+  :address => 'smtp.gmail.com',
+  :port => 587,
+  :authentication => :login,
+  :domain => 'student.gla.ac.uk',
+  :user_name => "glasgowpolyomicfacility@gmail.com",
+  :password => "glasgowGPFG"
+}
+
+

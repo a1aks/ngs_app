@@ -1,21 +1,21 @@
-<h1>Listing batches</h1>
-
+<span style= "text-align: center">
+<h2>Listing batches</h2>
+</span>
 <table>
   <tr>
     <th>Batch name</th>
 	<th>Submit date</th>
 	<th>Group leader</th>
 	<th>Contact person</th>
-	<th>Batch comment</th>
   </tr>
 
 <% @batches.each do |batch| %>
   <tr>
     <td><%=h batch.name %></td>
-	<td><%=h batch.submit_date %></td>	
+	<td><%=h batch.created_at.strftime("%a - %d %B") %></td>	
     <td><%=h batch.grp_leader %></td>
     <td><%=h batch.contact_person %></td>
-    <td><%=h batch.batch_comment %></td>
+	<td><%= link_to 'Add Sequencing', :controller => :sequences, :action => :new, :id => batch.id %></td>
     <td><%= link_to 'Show', batch %></td>
     <td><%= link_to 'Edit', edit_batch_path(batch) %></td>
     <td><%= link_to 'Destroy', batch, :confirm => 'Are you sure?', :method => :delete %></td>

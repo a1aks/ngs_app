@@ -1,13 +1,19 @@
 class Batch < ActiveRecord::Base
-  
-  def self.find_batches_to_show
-    find(:all, :order =>"submit_date" )
-  end
-  
+  # Associations
+  belongs_to :user
   has_many :samples
-  after_update :save_samples
-  validates_associated :samples
+  has_one :sequence
   
+  # Helper Methods
+  after_update :save_samples
+  
+  # Validations
+  validates_associated :samples
+       
+  # Main Validations for Batch details 
+    validates_presence_of(:name, :grp_leader, :contact_person, :extraction, :cleanup, :suspension)
+    validates_uniqueness_of :name
+    
   # a method that updates the sample attributes to the database which is displayed in the show.html after the edit.html
   def sample_attributes=(sample_attributes)
     sample_attributes.each do |attributes|
@@ -30,5 +36,5 @@ class Batch < ActiveRecord::Base
       s.save(false)
     end
     end
-  end  
+  end   
 end

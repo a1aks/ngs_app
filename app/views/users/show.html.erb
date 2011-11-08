@@ -1,1 +1,19 @@
-<%= @user.name %>, <%= @user.email %>
+<h3>Hi <%= @user.name %></h3>
+<% if current_user.admin? %>
+	<%= link_to "Latest Batches Submitted..! ",batches_path, :class => "submit_button  round" %><br \>
+	<%= link_to "Samples for Qc..!",samples_path, :class => "submit_button  round" %><br \>
+	<%= link_to "Samples for Library ..!",show_qc_passed_samples_path, :class => "submit_button  round" %><br \>
+	<%= link_to "Samples for RUN .!",show_lib_passed_samples_path, :class => "submit_button  round" %><br \>
+	<%= link_to "View all Passed Samples ..!",show_run_passed_samples_path, :class => "submit_button  round" %>
+
+
+<% else %>
+	<%= link_to "Submit a batch Now...!",new_batch_path, :class => "submit_button  round" %><br \>
+	<%= link_to "View Your Submitted Samples ",list_batch_users_path, :class => "submit_button  round" %>
+<!-- <%= @user.name %>, <%= @user.email %> -->
+
+<% end %>
+
+
+
+

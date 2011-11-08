@@ -1,0 +1,158 @@
+<span style= "text-align: center">
+<h2>Viewing All Passed Run Samples </h2>
+</span>
+
+<div id="cDNA_samples" style="background:#ccc;">
+  	<span style= "text-align: center">
+	<h4>Passed mRNA-Seq Samples </h4>
+	</span>
+	<table>
+			<tr>
+				<th>Sample Name</th>
+				<th>Prepared on</th>
+				<th>Flow cell</th>
+				<th>Lane</th>
+				<th>pM</th>
+				<th>Result</th>
+			</tr>
+	<% @bat_samp.each do |bat_samp| %>
+		<% if bat_samp.result_run == "pass" %>
+		<% if bat_samp.preparation == 'mRNA-Seq' %>
+				<tr>
+
+					<td><%= bat_samp.name %></td>
+					<td><%= bat_samp.run_date %></td>
+					<td><%= bat_samp.flow_cell %></td>
+					<td><%= bat_samp.lane %></td>
+					<td><%= bat_samp.pm %></td>
+					<td><%= bat_samp.result_run %></td>
+				</tr>
+			<% end %>	
+		<% end %>
+	<% end %>
+	</table>
+</div>
+
+<table>
+	<tr>
+		<td><a href="#" onclick="Effect.BlindUp('cDNA_samples'); return false;">Hide mRNA-Seq!</a></td>
+		<td><a href="#" onclick="$('cDNA_samples').show(); return false;">Display mRNA-Seq!</a></td>
+	</tr>
+</table>
+
+											<!-- End Of cDNA -->
+
+<div id="gDNA_samples" style=" background:#ccc;">
+  	<span style= "text-align: center">
+	<h4>Passed Genomic sequencing Samples</h4>
+	</span>
+	<table>
+			<tr>
+				<th>Sample Name</th>
+				<th>Prepared on</th>
+				<th>Flow cell</th>
+				<th>Lane</th>
+				<th>pM</th>
+				<th>Result</th>
+			</tr>
+	<% @bat_samp.each do |bat_samp| %>
+		<% if bat_samp.result_run == "pass" %>
+		<% if bat_samp.preparation == 'Genomic sequencing' %>
+				<tr>
+					<td><%= bat_samp.name %></td>
+					<td><%= bat_samp.run_date %></td>
+					<td><%= bat_samp.flow_cell %></td>
+					<td><%= bat_samp.lane %></td>
+					<td><%= bat_samp.pm %></td>
+					<td><%= bat_samp.result_run %></td>
+				</tr>
+			<% end %>	
+		<% end %>
+	<% end %>
+	</table>
+</div>
+<table>
+	<tr>
+		<td><a href="#" onclick="Effect.BlindUp('gDNA_samples'); return false;">Hide Genomic sequencing!</a></td>
+		<td><a href="#" onclick="$('gDNA_samples').show(); return false;">Display Genomic sequencing</a></td>
+	</tr>
+</table>
+
+											<!-- End of Genomic sequencing -->
+
+
+<div id="t_RNA_samples" style=" background:#ccc;">
+  	<span style= "text-align: center">
+	<h4>Passed Chip-Seq Samples </h4>
+	</span>
+	<table>
+			<tr>
+				<th>Sample Name</th>
+				<th>Prepared on</th>
+				<th>Flow cell</th>
+				<th>Lane</th>
+				<th>pM</th>
+				<th>Result</th>
+			</tr>
+	<% @bat_samp.each do |bat_samp| %>
+		<% if bat_samp.result_run == "pass" %>
+		<% if bat_samp.preparation == 'Chip-Seq' %>		
+			<tr>
+				<td><%= bat_samp.name %></td>
+				<td><%= bat_samp.run_date %></td>
+				<td><%= bat_samp.flow_cell %></td>
+				<td><%= bat_samp.lane %></td>
+				<td><%= bat_samp.pm %></td>
+				<td><%= bat_samp.result_run %></td>
+			</tr>
+			<% end %>	
+		<% end %>
+	<% end %>
+	</table>
+</div>
+<table>
+	<tr>
+		<td><a href="#" onclick="Effect.BlindUp('t_RNA_samples'); return false;">Hide Chip-Seq!</a></td>
+		<td><a href="#" onclick="$('t_RNA_samples').show(); return false;">Display Chip-Seq</a></td>
+	</tr>
+</table>
+											<!-- End of  Chip-Seq -->
+						
+<div id="t_RNA_samples" style=" background:#ccc;">
+  	<span style= "text-align: center">
+	<h4>Passed small RNA Samples </h4>
+	</span>
+	<table>
+			<tr>
+				<th>Sample Name</th>
+				<th>Prepared on</th>
+				<th>Flow cell</th>
+				<th>Lane</th>
+				<th>pM</th>
+				<th>Result</th>
+			</tr>
+	<% @bat_samp.each do |bat_samp| %>
+		<% if bat_samp.result_run == "pass" %>
+			<% if bat_samp.preparation == 'small RNA' %>		
+			<tr>
+				<td><%= bat_samp.name %></td>
+				<td><%= bat_samp.run_date %></td>
+				<td><%= bat_samp.flow_cell %></td>
+				<td><%= bat_samp.lane %></td>
+				<td><%= bat_samp.pm %></td>
+				<td><%= bat_samp.result_run %></td>
+			</tr>
+			<% end %>	
+		<% end %>
+	<% end %>
+	</table>
+</div>
+<table>
+	<tr>
+		<td><a href="#" onclick="Effect.BlindUp('t_RNA_samples'); return false;">Hide small RNA!</a></td>
+		<td><a href="#" onclick="$('t_RNA_samples').show(); return false;">Display small RNA!</a></td>
+	</tr>
+</table>	
+<!--  End of  small RNA -->
+						
+<p><%= link_to 'Return to sample listings', samples_path %></p>

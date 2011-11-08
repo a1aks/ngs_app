@@ -1,0 +1,177 @@
+<span style= "text-align: center">
+<h2>Adding Library Details</h2>
+</span>
+
+<% form_tag add_library_samples_path do %>
+
+
+<div id="cDNA_samples" style=" background:#ccc;">
+ 	<span style= "text-align: center">
+	<h4>Listing Passed QCs of mRNA-Seq</h4>
+	</span>
+	<table>
+				<tr>
+					<th></th>
+					<th>Sample Name</th>
+					<th>Conc</th>
+					<th>260/280</th>
+					<th>260/230</th>
+					<th>Agilent</th>
+					<th>QC Result</th>
+				</tr>
+		<% @bat_samp.each do |bat_samp| %>
+			<% if bat_samp.result == "pass" && bat_samp.lib_result != 'pass' %>
+				<% if bat_samp.preparation == 'mRNA-Seq' %>	
+				<tr>
+					<td><%= check_box_tag "bat_samp_ids[]", bat_samp.id %></td>
+					<td><%= bat_samp.name %></td>
+					<td><%= bat_samp.conc %></td>
+					<td><%= bat_samp.ratio1 %></td>
+					<td><%= bat_samp.ratio2 %></td>
+					<td><%= bat_samp.agilent %></td>
+					<td><%= bat_samp.result %></td>
+				</tr>	
+				<% end %>
+			<% end %>
+		<% end %>
+	</table>
+</div>
+
+<table>
+	<tr>
+		<td><a href="#" onclick="Effect.BlindUp('cDNA_samples'); return false;">Hide mRNA-Seq!</a></td>
+		<td><a href="#" onclick="$('cDNA_samples').show(); return false;">Display mRNA-Seq!</a></td>
+	</tr>
+</table>
+
+				<!--  End of cDNA Qc Passed -->
+				
+			
+<div id="gDNA_samples" style="background:#ccc;">
+	<span style= "text-align: center">
+	<h4>Listing Passed QCs for Genomic sequencing</h4>
+	</span>
+	<table>
+					<tr>
+						<th></th>
+						<th>Sample Name</th>
+						<th>Conc</th>
+						<th>260/280</th>
+						<th>260/230</th>
+						<th>Agilent</th>
+						<th>QC Result</th>
+					</tr>
+		<% @bat_samp.each do |bat_samp| %>
+			<% if bat_samp.result == "pass" && bat_samp.lib_result != 'pass' %>
+				<% if bat_samp.preparation == 'Genomic sequencing' %>	
+					<tr>
+						<td><%= check_box_tag "bat_samp_ids[]", bat_samp.id %></td>
+						<td><%= bat_samp.name %></td>
+						<td><%= bat_samp.conc %></td>
+						<td><%= bat_samp.ratio1 %></td>
+						<td><%= bat_samp.ratio2 %></td>
+						<td><%= bat_samp.agilent %></td>
+						<td><%= bat_samp.result %></td>
+					</tr>	
+				<% end %>
+			<% end %>
+		<% end %>
+	</table>
+</div>
+
+<table>
+	<tr>
+		<td><a href="#" onclick="Effect.BlindUp('gDNA_samples'); return false;">Hide Genomic sequencing!</a></td>
+		<td><a href="#" onclick="$('gDNA_samples').show(); return false;">Display Genomic sequencing!</a></td>
+	</tr>
+</table>					
+				<!-- End of gDNA QC Passed  -->
+
+
+<div id="t_RNA_samples" style="background:#ccc;">
+	<span style= "text-align: center">
+	<h4>Listing Passed QCs for Chip-Seq</h4>
+	</span>
+	<table>
+					<tr>
+						<th></th>
+						<th>Sample Name</th>
+						<th>Conc</th>
+						<th>260/280</th>
+						<th>260/230</th>
+						<th>Agilent</th>
+						<th>QC Result</th>
+					</tr>
+		<% @bat_samp.each do |bat_samp| %>
+			<% if bat_samp.result == "pass" && bat_samp.lib_result != 'pass' %>
+				<% if bat_samp.preparation == 'Chip-Seq' %>	
+					<tr>
+						<td><%= check_box_tag "bat_samp_ids[]", bat_samp.id %></td>
+						<td><%= bat_samp.name %></td>
+						<td><%= bat_samp.conc %></td>
+						<td><%= bat_samp.ratio1 %></td>
+						<td><%= bat_samp.ratio2 %></td>
+						<td><%= bat_samp.agilent %></td>
+						<td><%= bat_samp.result %></td>
+					</tr>	
+				<% end %>
+			<% end %>
+		<% end %>
+	</table>
+</div>
+<table>
+	<tr>
+		<td><a href="#" onclick="Effect.BlindUp('t_RNA_samples'); return false;">Hide Chip-Seq!</a></td>
+		<td><a href="#" onclick="$('t_RNA_samples').show(); return false;">Display Chip-Seq!</a></td>
+	</tr>
+</table>
+
+
+				<!-- End of Chip-Seq Qc Passed -->
+
+
+
+<!-- End of small RNA -->
+
+
+<div id="t_RNA_samples" style="background:#ccc;">
+	<span style= "text-align: center">
+	<h4>Listing Passed QCs for small RNA</h4>
+	</span>
+	<table>
+					<tr>
+						<th></th>
+						<th>Sample Name</th>
+						<th>Conc</th>
+						<th>260/280</th>
+						<th>260/230</th>
+						<th>Agilent</th>
+						<th>Result</th>
+					</tr>
+		<% @bat_samp.each do |bat_samp| %>
+			<% if bat_samp.result == "pass" %>
+				<% if bat_samp.preparation == 'small RNA' %>	
+					<tr>
+						<td><%= check_box_tag "bat_samp_ids[]", bat_samp.id %></td>
+						<td><%= bat_samp.name %></td>
+						<td><%= bat_samp.conc %></td>
+						<td><%= bat_samp.ratio1 %></td>
+						<td><%= bat_samp.ratio2 %></td>
+						<td><%= bat_samp.agilent %></td>
+						<td><%= bat_samp.result %></td>
+					</tr>	
+				<% end %>
+			<% end %>
+		<% end %>
+	</table>
+</div>
+<table>
+	<tr>
+		<td><a href="#" onclick="Effect.BlindUp('t_RNA_samples'); return false;">Hide small RNA!</a></td>
+		<td><a href="#" onclick="$('t_RNA_samples').show(); return false;">Display small RNA!</a></td>
+	</tr>
+</table>
+
+	<p><%= submit_tag "Add Library Results" %></p>
+	<p><%= link_to 'Back to sample listings', samples_path %></p>
+<% end %>

@@ -2,8 +2,9 @@
 <h2>Adding batch Details</h2>
 </span>
 <div id="container">
-<% form_for(@batch) do |f| %>
+<% simple_form_for @batch do |f| %>
  <%= render :partial => 'fields', :locals => { :f => f } %>
-<p><%= submit_tag "Submit Batch" %></p>
+<p><%= submit_tag "Submit Batch", :confirm => "Please Collect your samples within three months after they have been sequenced." %></p>
+
 <% end %>
 </div>

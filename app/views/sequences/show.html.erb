@@ -1,0 +1,103 @@
+<span style= "text-align: center">	
+<h4>Sequencing Details for Batch No: <%=h @batch.name %></h4>
+</span>
+<!--  Print option, a button that triggers the print menu -->
+<%= link_to_function("Print this Page", "javascript:print()") %> | 
+<%= link_to 'Back to Batches list', batches_path %>
+<fieldset>
+	<legend>Sequencing Details</legend>
+	<table>
+		<tr>
+			<th>From:</th>
+			<td><%= @batch.contact_person %></td>
+			<th>Group Leader</th>
+			<td><%= @batch.grp_leader %></td>
+		</tr>
+		<tr>
+			<th>Sample Type:</th>
+			<td><%= @batch.sample_type %></td>
+			<th>Organism</th>
+			<td><%=h @sequence.organism %></td>
+		</tr>
+		<tr>
+			<th>Arrived On</th>
+			<td> <%= @batch.created_at.strftime("%a - %d %B") %></td>
+			<th>Run Type</th>
+			<td><%=h @batch.sequencing %></td>
+		</tr>
+	</table>
+		<p> <strong>Batch Comments:</strong><br \> <%=h @sequence.comments %></p>
+</fieldset>
+
+<!--  The sequencing details are not correctly shown yet -->
+
+<!--  for qc Details -->
+
+<fieldset>
+	<legend>Qc details</legend>
+	<table>
+		<tr>
+			<th>Sample name</th>
+			<th>Concentration</th>
+			<th>260/280</th>
+			<th>260/230</th>
+			<th>RIN</th>
+		</tr>
+		<% for qc in @batch.samples %>
+		<tr>
+			<td><%=h qc.name %></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<% end %>
+	</table>
+</fieldset>
+
+<!--  for Library details  -->
+
+<fieldset>
+	<legend>Library details</legend>
+	<table>
+		<tr>
+			<th>Sample name</th>
+			<th>Prepared on</th>
+			<th>KAPA</th>
+			<th>Qubit</th>
+			<th>Conc</th>
+		</tr>
+		<% for lib in @batch.samples %>
+		<tr>
+			<td><%=h lib.name %></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<% end %>
+	</table>
+</fieldset>
+
+<!--  For Run details  -->
+<fieldset>
+	<legend>Run details</legend>
+	<table>
+		<tr>
+			<th>Sample name</th>
+			<th>Date</th>
+			<th>Flow cell</th>
+			<th>Lane</th>
+			<th>PM</th>
+		</tr>
+		<% for run in @batch.samples %>
+		<tr>
+			<td><%=h lib.name %></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<% end %>
+	</table>
+</fieldset>

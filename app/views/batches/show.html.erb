@@ -1,11 +1,11 @@
-<span style= "text-align: center">
-<h2>Details for <%=h @batch.name %></h2>
+<span style= "text-align: center">	
+<h4>The details for your batch: <%=h @batch.name %></h4>
 </span>
 <div id="container">
 <table >
 	<tr>
 	<th>Submit date:</th>
-	<td><%=h @batch.submit_date %></td>	
+	<td><%=h @batch.created_at.strftime("%a - %d %B") %></td>	
 	<th>Contact person: </th>
 	<td> <%=h @batch.contact_person %></td>	
 	</tr>	
@@ -26,43 +26,54 @@
 	<li>Resuspension in: <b><%=h @batch.suspension %></b></li>
 </ul>	
 </p>
-<p><b>Sample Collection:</b> <%=h @batch.collect %> </p>
+<fieldset>
+<p><b>Collecting the samples once we are done:</b> <%=h @batch.collect %> </p>
 
 <p>
 <b>Type of Preparation: </b>
 	<%=h @batch.preparation %>	
 </p>
-
+<p><b>Requirements of Multiplexing:</b> <%=h @batch.multiplex %> <br \>
+	<% if @batch.multiplex == "yes" %>
+	<strong>Multiplex value: </strong><%=h @batch.multi_value%>
+	<% end %>
+</p>
 <p>
 <b>Type of Sequencing: </b>
 	<%=h @batch.sequencing %>	
 </p>
-
+<p><b>Requirements of Bioinformatics:</b> <%=h @batch.bioinfo %> </p>
+</fieldset>
 <fieldset>
-  <legend>Samples: <%=h @batch.samp_no %></legend>
+  <legend>Samples: </legend>
 <table>
-<tr>
-	  <th>Name  </th> 
-	  <th>Species  </th>
-	  <th> Concentration  </th>
-	  <th>  Volume   </th>
-	  <th> Sample comment  </th>
-</tr>
+	<tr>
+		<th>Name  </th> 
+		<th>Species  </th>
+		<th> Concentration  </th>
+		<th>  Volume   </th>
+		<th>  No. of reads  </th>
+		<th> Sample comment  </th>
+	</tr>
 	
-	<% for sample in @batch.samples %>
-<ol>
-<tr>
-	  <td><%=h sample.name %></td> 
-	  <td><%=h sample.organism %></td>
-	  <td><%=h sample.ini_conc %></td>
-	  <td><%=h sample.ini_vol %></td>
-	  <td><%=h sample.samp_comment %></td>
-</tr>
-</ol>
-<% end %>
+		<% for sample in @batch.samples %>
+	<ol>
+	<tr>
+		  <td><%=h sample.name %></td> 
+		  <td><%=h sample.organism %></td>
+		  <td><%=h sample.ini_conc %></td>
+		  <td><%=h sample.ini_vol %></td>
+		  <td><%=h sample.read_no %></td>
+		  <td><%=h sample.samp_comment %></td>
+	</tr>
+	</ol>
+	<% end %>
 </table>
 </fieldset>
 </div>
 
 <%= link_to 'Edit', edit_batch_path(@batch) %> |
+<%= link_to_function("Print this Page", "javascript:print()") %>
+<% if current_user.admin? %> |
 <%= link_to 'Back', batches_path %>
+<% end %>

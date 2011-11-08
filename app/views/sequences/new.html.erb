@@ -1,0 +1,32 @@
+<span style= "text-align: center">
+<h2>GAII Sequencing Samples for <%= @batch.name %></h2>
+</span>
+<% simple_form_for @sequence, :url => { :action => :create, :id => @batch.id } do |f| %>
+<fieldset>
+	<legend>Sequencing Details</legend>
+	<table>
+		<tr>
+			<th>From:</th>
+			<td><%= @batch.contact_person %></td>
+			<th>Group Leader</th>
+			<td><%= @batch.grp_leader %></td>
+		</tr>
+		<tr>
+			<th>Sample Type:</th>
+			<td><%= @batch.sample_type %></td>
+			<th>Organism</th>
+			<td><%= f.text_field :organism %></td>
+		</tr>
+		<tr>
+			<th>Arrived On</th>
+			<td> <%= @batch.submit_date %></td>
+			<th>Run Type</th>
+			<td><%=@batch.sequencing %></td>
+		</tr>
+	</table>
+		<p> <strong>Comments:</strong><br \> <%=f.text_area :comments %></p>
+</fieldset>
+<p><%= f.submit 'Create' %></p>
+<% end %>
+<!-- ################################## Main Sample Information ################################# -->
+

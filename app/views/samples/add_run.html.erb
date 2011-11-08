@@ -1,0 +1,34 @@
+<span style= "text-align: center">
+<h2>Adding Run to Samples</h2>
+</span>
+
+<% form_tag create_run_samples_path, :method => :put do %>
+		
+		<div id="table">
+			<p>
+				<span class="col1"><strong>Sample Name</strong></span>
+				<span class="col7"><strong>Date</strong> </span>
+				<span class="col7"> <strong>Flow cell</strong></span>
+				<span class="col4"><strong> Lane</strong> </span>
+				<span class="col7"> <strong>PM</strong> </span>
+				<span class="col3"> <strong>Result</strong></span>
+			</p><br \>
+
+		<% for sample in @sample_run %>
+		<!-- For each sample in @samples, it adds qc and renders the page with only those ids -->
+			<% fields_for "samples[]", sample do |f| -%>			
+				<p>
+					<span class="col1"><%= sample.name %></span>
+					<span class="col7"><%= f.text_field :run_date_string, :size => 12 %></span>
+					<span class="col7"><%= f.text_field :flow_cell, :size => 8 %></span>
+					<span class="col4"><%= f.text_field :lane, :size => 8 %></span>
+					<span class="col7"><%= f.text_field :pm, :size => 8 %> </span>
+					<span class="col3"><%= f.select :result_run, [['Pending','pending'],['Pass','pass'],['Fail','fail']], :selected => 'pending'   %></span>
+				</p>
+			<% end %>
+		<% end %><br \>	
+		</div><br \> <!-- eof #table -->
+	<p><%= submit_tag "Submit" %></p>
+<% end %>
+
+<%= link_to 'Back to sample listings', samples_path %>

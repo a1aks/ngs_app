@@ -1,15 +1,13 @@
 <%= error_messages_for :batch %>
 <table border="1">
+	
+	 <p><center><%= f.label :Batch_name %>&nbsp;
+	 <%= f.text_field :name, :size => 25 %> &nbsp;</center></p>
+	
 	<tr>
-	<th> <%= f.label :Batch_name %></th>
-	<td> <%= f.text_field :name, :size => 25 %> &nbsp;</td>
-	<th> <%= f.label :date %></th>
-	<td><%= f.date_select :submit_date %></td>
-	</tr>
-	<tr>
-		<th> <%= f.label :group_leader %></th>
+		<th> <%= f.label :group_leader %>&nbsp;</th>
 		<td><%= f.text_field :grp_leader, :size => 25  %></td>
-		<th><%= f.label :contact_person %></th>
+		<th><%= f.label :contact_person %>&nbsp;</th>
 		<td><%= f.text_field :contact_person, :size => 25  %></td>
 	</tr>	
 </table><br \>
@@ -20,19 +18,19 @@
 		<li>
 		<%= f.label :sample_type %>
 		<%= f.radio_button(:sample_type, "gDNA") %>gDNA
-		<%= f.radio_button(:sample_type, "total RNA") %>total RNA
+		<%= f.radio_button(:sample_type, "total RNA", :checked => true) %>total RNA
 		<%= f.radio_button(:sample_type, "cDNA") %>cDNA
 		</li><br \>	
 		<li>
-			<%= f.label :extraction_method %>
+			<%= f.label :extraction_method %>&nbsp;
 			<%= f.text_field :extraction, :size => 25 %>
 		</li><br \>	
 		<li>
-			<%= f.label :cleanup_method %>
+			<%= f.label :cleanup_method %>&nbsp;
 			<%= f.text_field :cleanup, :size => 25 %>
 		</li><br \>	
 		<li>
-			<%= f.label :suspension_in %>
+			<%= f.label :suspension_in %>&nbsp;
 			<%= f.text_field :suspension, :size => 25 %>
 		</li>
 	</ol>
@@ -41,8 +39,7 @@
 <li>
 <%= f.label :do_you_want_to_collect_your_samples_after_the_experiment %>
 <%= f.radio_button(:collect, "yes") %>yes
-<%= f.radio_button(:collect, "no") %>no
-
+<%= f.radio_button(:collect, "no", :checked => true) %>no
 </li>
 </ul><br \>
 
@@ -50,34 +47,50 @@
 <fieldset>
 	<legend>Type of Sample preparation required:</legend>
 	<%= f.radio_button(:preparation, "Genomic sequencing") %>Genomic sequencing
-	<%= f.radio_button(:preparation, "mRNA-Seq") %>mRNA-Seq	
+	<%= f.radio_button(:preparation, "mRNA-Seq", :checked => true) %>mRNA-Seq	
 	<%= f.radio_button(:preparation, "Chip-Seq") %>Chip-Seq
-	<%= f.radio_button(:preparation, "small RNA") %>small RNA
-	<%= f.radio_button(:preparation, "Multiplex") %>Multiplex<br \>
+	<%= f.radio_button(:preparation, "small RNA") %>small RNA<br \>
 </fieldset><br \>
+<ul>
+<li>
+<%= f.label :do_you_want_multiplexing_for_the_samples %>
+<%= f.radio_button(:multiplex, "yes") %>yes
+<%= f.radio_button(:multiplex, "no", :checked => true) %>no
+</li>
+<p>
+	If yes Please fill in the Range 
+	<%= f.input :multi_value, :label => '', :collection => 1..12 %>
+</p>
+
+</ul><br \>
 
 <fieldset>
 	<legend>Type of Sequencing:</legend>
 	<%= f.radio_button(:sequencing, "Single End Sequencing") %>Single End Sequencing
-	<%= f.radio_button(:sequencing, "Paired End Sequencing") %>Paired End Sequencing
-	<%= f.radio_button(:sequencing, "Bioinformatics") %>Bioinformatics<br \>	
+	<%= f.radio_button(:sequencing, "Paired End Sequencing", :checked => true) %>Paired End Sequencing<br \>	
 </fieldset>
-<p>
-	<%= f.label :number_of_samples %><br />
-  	<%= f.text_field :samp_no %>
-</p>
+<ul>
+<li>
+<%= f.label :do_you_want_Bioinformatics %>
+<%= f.radio_button( :bioinfo, "yes") %>yes
+<%= f.radio_button( :bioinfo, "no", :checked => true) %>no
+</li>
+</ul><br \>
 <fieldset>
 	<legend>Sample Information:</legend>
-		
+		<div id="table">
+			<p>
+				<span class="col1"><strong>Sample Name</strong></span>
+				<span class="col2"><strong>Species</strong> </span>
+				<span class="col7"> <strong>Conc (ηg/μl)</strong></span>
+				<span class="col7"><strong> Volume (μl) </strong> </span>
+				<span class="col7"> <strong>No.of reads</strong> </span>
+				<span class="col6"> <strong>Comment</strong> </span>
+			</p><br \>
 <div id="samples">
-	<%= render :partial => 'sample', :collection => @batch.samples %>
-	<%= add_sample_link "Add a sample" %>	
+	<%= render :partial => 'sample', :collection => @batch.samples %>		
 </div>
+</div><br \> <!-- eof #table -->
+<%= add_sample_link "Add a sample" %><br \>
 </fieldset>
-
-<p>
-    <%= f.label :batch_comment %><br />
-    <%= f.text_area :batch_comment, :rows => 2 %>
-</p>
-
 

@@ -1,0 +1,133 @@
+<span style= "text-align: center">
+<h2>Add QC Details</h2>
+</span>
+<% form_tag add_qcs_samples_path do %>
+
+<div id="cDNA_samples" style="background:#ccc;">
+<span style= "text-align: center">
+<h4>Listing samples of cDNA</h4>
+</span>
+<table>	
+			<tr>
+				<th></th>
+				<th>Sample Name</th>
+				<th>Organism</th>
+				<th>Initial Conc</th>
+				<th>Initial Vol</th>
+				<th>Read Number</th>
+				<th>Comment</th>
+			</tr>
+	<% @bat_samp.each do |bat_samp| %>
+		<% if bat_samp.result != 'pass' %>
+		<% if bat_samp.sample_type == 'cDNA' %>	
+			
+			<tr>
+				<td><%= check_box_tag "bat_samp_ids[]", bat_samp.id %></td>
+				<td><%= bat_samp.name %></td>
+				<td><%= bat_samp.organism %></td>
+				<td><%= bat_samp.ini_conc %></td>
+				<td><%= bat_samp.ini_vol %></td>
+				<td><%= bat_samp.read_no %></td>
+				<td><%= bat_samp.samp_comment %></td>
+			</tr>
+		<% end %>
+		<% end %>
+	<% end %>
+</table><br \>
+
+</div>
+<table>
+	<tr>
+		<td><a href="#" onclick="Effect.BlindUp('cDNA_samples'); return false;">Hide cDNA!</a></td>
+		<td><a href="#" onclick="$('cDNA_samples').show(); return false;">Display cDNA!</a></td>
+	</tr>
+</table>
+								<!-- End Of cDNA -->
+
+
+
+
+<div id="gDNA_samples" style="background:#ccc;">
+  	<span style= "text-align: center">
+	<h4>Listing samples of gDNA samples</h4>
+	</span>
+
+	<table>
+				<tr>
+					<th></th>
+					<th>Sample Name</th>
+					<th>Organism</th>
+					<th>Initial Conc</th>
+					<th>Initial Vol</th>
+					<th>Read Number</th>
+					<th>Comment</th>
+				</tr>
+		<% @bat_samp.each do |bat_samp| %>
+			<% if bat_samp.result != 'pass' %>
+			<% if bat_samp.sample_type == 'gDNA' %>	
+				<tr>
+					<td><%= check_box_tag "bat_samp_ids[]", bat_samp.id %></td>
+					<td><%= bat_samp.name %></td>
+					<td><%= bat_samp.organism %></td>
+					<td><%= bat_samp.ini_conc %></td>
+					<td><%= bat_samp.ini_vol %></td>
+					<td><%= bat_samp.read_no %></td>
+					<td><%= bat_samp.samp_comment %></td>
+				</tr>					
+			<% end %>
+			<% end %>
+		<% end %>
+	</table>
+</div>
+
+<table>
+	<tr>
+		<td><a href="#" onclick="Effect.BlindUp('gDNA_samples'); return false;">Hide gDNA!</a></td>
+		<td><a href="#" onclick="$('gDNA_samples').show(); return false;">Display gDNA!</a></td>
+	</tr>
+</table>
+									<!-- End of gDNA -->
+
+<div id="t_RNA_samples" style=" background:#ccc;">
+  	<span style= "text-align: center">
+	<h4>Listing samples of Total RNA samples</h4>
+	</span>
+	<table>
+				<tr>
+					<th></th>
+					<th>Sample Name</th>
+					<th>Organism</th>
+					<th>Initial Conc</th>
+					<th>Initial Vol</th>
+					<th>Read Number</th>
+					<th>Comment</th>
+				</tr>
+		<% @bat_samp.each do |bat_samp| %>
+			<% if bat_samp.result != 'pass' %>
+			<% if bat_samp.sample_type == 'total RNA' %>	
+				<tr>
+					<td><%= check_box_tag "bat_samp_ids[]", bat_samp.id %></td>
+					<td><%= bat_samp.name %></td>
+					<td><%= bat_samp.organism %></td>
+					<td><%= bat_samp.ini_conc %></td>
+					<td><%= bat_samp.ini_vol %></td>
+					<td><%= bat_samp.read_no %></td>
+					<td><%= bat_samp.samp_comment %></td>
+				</tr>
+				<% end %>
+				<% end %>				
+		<% end %>
+	</table> 									
+
+</div>
+<table>
+	<tr>
+		<td><a href="#" onclick="Effect.BlindUp('t_RNA_samples'); return false;">Hide Total RNA!</a></td>
+		<td><a href="#" onclick="$('t_RNA_samples').show(); return false;">Display Total RNA!</a></td>
+	</tr>
+</table>
+
+
+<p><%= submit_tag "Add QC" %> </p>
+
+<% end %>

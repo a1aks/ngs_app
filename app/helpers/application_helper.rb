@@ -2,7 +2,7 @@
 module ApplicationHelper
   # Return a title on a per-page basis.
   def title
-    base_title = "Sir Henry Wellcome Functional Genomics Facility"
+    base_title = "Glasgow Polyomics Facility - Genomics"
     if @title.nil?
       base_title
     else

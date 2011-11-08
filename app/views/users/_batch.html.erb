@@ -1,0 +1,13 @@
+<span style= "text-align: center">
+<h2>Sample Progress </h2>
+</span>
+
+<table>
+	<tr>
+		<th>Sample Name</th>
+		<th>Qc Group</th>
+		<th>Library Group</th>
+		<th>Run Results</th>				
+	</tr>
+	<%= render( :partial => "sample_view", :collection => batch.samples ) %>
+</table>

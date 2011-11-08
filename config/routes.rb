@@ -1,6 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :users
+  map.resources :users, :collection => { :list_batch => :get, :view_samples => :post }
+  map.resources :samples, :collection => { :add_qcs => :post, :create_qc => :put, :show_qc_passed => :get, :add_library => :post, :create_library => :put,
+                                           :show_lib_passed => :get, :add_lib_qc => :post, :create_lib_qc => :put, :show_lib_qc_passed => :get, :add_run => :post, :create_run => :put, :show_run_passed => :get  } 
+  map.resources :qcs
   map.resources :batches
+  map.resources :sequences
   map.resources :sessions, :only => [:new, :create, :destroy]
   map.contact '/contact', :controller => 'pages', :action => 'contact'
   map.about '/about', :controller => 'pages', :action => 'about'
@@ -8,7 +12,9 @@ ActionController::Routing::Routes.draw do |map|
   map.signup '/signup',   :controller => 'users', :action => 'new'
   map.signin  '/signin',  :controller => 'sessions', :action => 'new'
   map.signout '/signout', :controller => 'sessions', :action => 'destroy'
+  map.submitnew '/submitNew', :controller => 'batches', :action => 'new'
   
+  map.forgot_password    '/forgot_password', :controller => 'users', :action => 'forgot_password'  
 
   # The priority is based upon order of creation: first created -> highest priority.
 

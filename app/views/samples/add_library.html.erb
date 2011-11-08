@@ -1,0 +1,34 @@
+<span style= "text-align: center">
+<h2>Adding Library Groups</h2>
+</span>
+
+<% form_tag create_library_samples_path, :method => :put do %>
+
+<div id="table">
+<p>
+	<span class="col1"><strong>Sample Name</strong></span>
+	<span class="col7"><strong>Prepared on</strong> </span>
+	<span class="col3"><strong>KAPA</strong> </span>
+	<span class="col4"> <strong>Qubit </strong></span>
+	<span class="col6"> <strong>Conc</strong> </span>
+	<span class="col3"> <strong>Result</strong></span>
+</p><br \>
+	
+	<% for sample in @sample_lib %>
+		<% fields_for "samples[]", sample  do |f| %>
+			<p>
+				<span class="col1"><%= sample.name %></span>
+				<span class="col7"><%= f.text_field :prepared_on, :size => 10 %></span>
+				<span class="col3"> <%= f.text_field :kapa, :size => 8 %></span>
+				<span class="col4"> <%= f.text_field :lib_qubit, :size => 8 %></span>
+				<span class="col6"> <%= f.text_field :lib_conc, :size => 8 %> </span> 			
+				<span class="col3"><%= f.select :lib_result, [['Pending','pending'],['Pass','pass'],['Fail','fail']], :selected => 'pending'%></span>
+				<!-- Comments to be added in the database and also during lay out of this thing -->
+			</p>			
+		<% end %>
+	<% end %><br \>	
+	</div><br \> <!-- eof #table -->
+	<p><%= submit_tag "Submit" %></p>
+<% end %>
+
+<%= link_to 'Back to sample listings', samples_path %>

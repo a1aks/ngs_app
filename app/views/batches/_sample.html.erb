@@ -1,27 +1,25 @@
 <div class="sample">
 <% fields_for "batch[sample_attributes][]", sample do |s_form| %>  
-<table>
-	 <tr>
-	    <th>Sample Name  </th> 
-	    <th>Species  </th>
-	    <th>Concentration  </th>
-	    <th>Volume </th>
-	    <th>Sample comment  </th>
-	  </tr>
-	 <tr>
-	    <td><%= s_form.text_field :name, :index => nil, :size => 15 %></td> 
-	    <td><%= s_form.text_field :organism, :index => nil, :size => 15 %></td>
-	    <td><%= s_form.text_field :ini_conc, :index => nil, :size => 15 %></td>
-	    <td><%= s_form.text_field :ini_vol, :index => nil, :size => 15 %></td>
-	    <td><%= s_form.text_field :samp_comment, :index => nil, :size => 15 %></td>
-	  </tr>
-</table>	
-	<% if sample.new_record? %>
-	<%= link_to_function "remove", "$(this).up('.sample').remove()" %>
-	<% else %>
-	<%= link_to_function "remove", "mark_for_destroy(this)" %>
-	<%= s_form.hidden_field :id, :index => nil %>
-	<%= s_form.hidden_field :should_destroy, :index => nil, :class => 'should_destroy' %>
-	<% end %>	
+
+<!--  There is something to do with this <p> -->
+	
+<span>
+	<span class="col1"><%= s_form.text_field :name, :index => nil, :size => 10 %></span>
+	<span class="col2"><%= s_form.text_field :organism, :index => nil, :size => 8 %></span>
+	<span class="col7"><%= s_form.text_field :ini_conc, :index => nil, :size => 5 %></span>
+	<span class="col7"> <%= s_form.text_field :ini_vol, :index => nil, :size => 5 %></span>
+	<span class="col9">	<%= s_form.select :read_no, [['2.5 million','2.5m'],['7.5 million','7.5m'],['15 million','15m'],['30 million','30m'],['60 million','60m']], :selected => '30m' %> </span>
+	<span class="col6"> <%= s_form.text_field :samp_comment, :index => nil, :size => 10 %></span> &nbsp;
+		
+	<font size="-2">
+		<% if sample.new_record? %>
+		<%= link_to_function "remove", "$(this).up('.sample').remove()" %>
+		<% else %>
+		<%= link_to_function "remove", "mark_for_destroy(this)" %>
+		<%= s_form.hidden_field :id, :index => nil %>
+		<%= s_form.hidden_field :should_destroy, :index => nil, :class => 'should_destroy' %>
+		<% end %>
+	</font>
+</span>	
 <% end %>
 </div>

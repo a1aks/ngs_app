@@ -1,10 +1,15 @@
+<span style= "text-align: center">
 <h2>Sign up</h2>
-
-<% form_for(@user) do |f| %>
+</span>
+<% simple_form_for(@user) do |f| %>
 	<%= f.error_messages %>
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :first_name %><br />
     <%= f.text_field :name %>
+  </div>
+ <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :lname %>
   </div>
   <div class="field">
     <%= f.label :email %><br />
@@ -22,3 +27,4 @@
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
+

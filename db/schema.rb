@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110718162646) do
+ActiveRecord::Schema.define(:version => 20110829155515) do
 
   create_table "batches", :force => true do |t|
     t.string   "name"
@@ -26,7 +26,23 @@ ActiveRecord::Schema.define(:version => 20110718162646) do
     t.string   "preparation"
     t.string   "sequencing"
     t.string   "collect"
-    t.integer  "samp_no"
+    t.string   "multiplex"
+    t.string   "bioinfo"
+    t.integer  "user_id"
+    t.string   "status"
+    t.integer  "multi_value"
+  end
+
+  create_table "qcs", :force => true do |t|
+    t.integer  "sample_id"
+    t.decimal  "conc",       :precision => 4, :scale => 3, :default => 0.0
+    t.decimal  "ratio1",     :precision => 4, :scale => 3, :default => 0.0
+    t.decimal  "ratio2",     :precision => 4, :scale => 3, :default => 0.0
+    t.decimal  "agilent",    :precision => 4, :scale => 1, :default => 0.0
+    t.decimal  "qubit",      :precision => 4, :scale => 3, :default => 0.0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "result"
   end
 
   create_table "samples", :force => true do |t|
@@ -38,6 +54,36 @@ ActiveRecord::Schema.define(:version => 20110718162646) do
     t.decimal  "ini_conc"
     t.decimal  "ini_vol"
     t.string   "samp_comment"
+    t.integer  "read_no"
+    t.decimal  "conc",          :precision => 4, :scale => 3, :default => 0.0
+    t.decimal  "ratio1",        :precision => 4, :scale => 3, :default => 0.0
+    t.decimal  "ratio2",        :precision => 4, :scale => 1, :default => 0.0
+    t.decimal  "agilent",       :precision => 4, :scale => 3, :default => 0.0
+    t.decimal  "qubit",         :precision => 4, :scale => 3, :default => 0.0
+    t.string   "result"
+    t.decimal  "kapa",          :precision => 4, :scale => 3, :default => 0.0
+    t.date     "prepared"
+    t.decimal  "lib_qubit",     :precision => 4, :scale => 3, :default => 0.0
+    t.decimal  "lib_agilent",   :precision => 4, :scale => 3, :default => 0.0
+    t.decimal  "lib_conc",      :precision => 4, :scale => 3, :default => 0.0
+    t.string   "lib_result"
+    t.string   "lib_qc_result"
+    t.date     "run_date"
+    t.string   "flow_cell"
+    t.string   "lane"
+    t.decimal  "pm",            :precision => 4, :scale => 3, :default => 0.0
+    t.text     "run_comments"
+    t.string   "result_run"
+    t.text     "lib_comment"
+  end
+
+  create_table "sequences", :force => true do |t|
+    t.string   "organism"
+    t.string   "run_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "comments"
+    t.integer  "batch_id"
   end
 
   create_table "sessions", :force => true do |t|
@@ -59,6 +105,7 @@ ActiveRecord::Schema.define(:version => 20110718162646) do
     t.string   "salt"
     t.string   "remember_token"
     t.boolean  "admin",              :default => false
+    t.string   "lname"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

@@ -1,0 +1,47 @@
+<span style= "text-align: center">
+<h2>Listing your Batches </h2>
+</span>
+
+<table>
+	<tr>
+		<th>Batch Name</th>
+		<th>Date</th>
+		<th>Status</th>
+	</tr>
+
+<% @batch.each do |ub| %>
+	<!--  Display batches of users who have submitted their batches -->
+	<!--  So if the current user id is "==" to the batch.user_id -->
+	<% if current_user.id == ub.user_id %>
+	<tr>
+		<td><%=h ub.name %></td>
+		<!--  Specific Time and Date format ( Learnt from Rails cast - ri Time.strftime in the Terminal) -->
+		<td><%=h ub.created_at.strftime("%a - %d %B") %></td>
+
+		<!-- Block for samples in the batch -->
+		<% sample_count = 0 %>
+		<% status_count = 0 %>
+		<% for sample in ub.samples %>
+			<% if sample.result_run == 'pass' %>
+				<% status_count += 1 %>		
+			<% end %>	
+		<% sample_count += 1 %>
+		<% end %>
+
+		<!-- Block for testing whether Sequenced, Partial and Pending -->
+
+		<% if status_count > 0  && status_count != sample_count %>
+		<td><%= ub.status = "Partially Sequenced" %></td>	
+		<% elsif status_count = sample_count && status_count != 0 %>
+		<td><%= ub.status = "Sequenced" %></td>	
+		<% else %>
+		<td><%= ub.status = "In Progress" %></td>
+		<% end %>		
+		<!-- A Button, when clicked displays the samples pertaining to that Batch  -->
+		<!--  The action Method is missing.. Write a method in the users_controller -->
+		<!--  Removed , :method => :get -->
+		<td><%= button_to "View Samples!", { :action => 'view_samples', :id => ub.id} %></td>	
+		</tr>
+	<% end %>
+<% end %>
+</table>

@@ -1,0 +1,184 @@
+<span style= "text-align: center">
+<h2>Add Run Details </h2>
+</span>
+
+<% form_tag add_run_samples_path do %>
+
+
+<div id="cDNA_samples" style="background:#ccc;">
+  
+<span style= "text-align: center">
+<h4>Passed mRNA-Seq Samples</h4>
+</span>
+
+<table>
+			<tr>
+				<th></th>
+				<th>Sample Name</th>
+				<th>Kapa</th>
+				<th>Qubit</th>
+				<th>Conc</th>				
+				<th>Prepared on</th>
+				<th>Lib Result</th>
+			</tr>
+	<% @bat_samp.each do |bat_samp| %>
+		<% if bat_samp.lib_result == "pass" && bat_samp.result_run != 'pass' %>
+		<% if bat_samp.preparation == 'mRNA-Seq' %>
+			<tr>
+				<td><%= check_box_tag "bat_samp_ids[]", bat_samp.id %></td>
+				<td><%= bat_samp.name %></td>				
+				<td><%= bat_samp.kapa %></td>
+				<td><%= bat_samp.lib_qubit %></td>
+				<td><%= bat_samp.lib_conc %></td>
+				<td><%= bat_samp.prepared %></td>				
+				<td><%= bat_samp.lib_result %></td>
+			</tr>
+			<% end %>	
+		<% end %>
+	<% end %>
+</table>
+</div>
+<table>
+	<tr>
+		<td><a href="#" onclick="Effect.BlindUp('cDNA_samples'); return false;">Hide mRNA-Seq!</a></td>
+		<td><a href="#" onclick="$('cDNA_samples').show(); return false;">Display mRNA-Seq!</a></td>
+	</tr>
+</table>
+
+									<!--  End of Lib Prep for cDNA -->
+									
+					
+	
+
+	<div id="gDNA_samples" style="background:#ccc;">
+	  	<span style= "text-align: center">
+		<h4>Passed Libraries for Genomic sequencing samples</h4>
+		</span>
+
+		<table>
+					<tr>
+						<th></th>
+						<th>Sample Name</th>
+						<th>Kapa</th>
+						<th>Qubit</th>
+						<th>Conc</th>
+						<th>Prepared on</th>
+						<th>Lib Result</th>
+					</tr>
+			<% @bat_samp.each do |bat_samp| %>
+				<% if bat_samp.lib_result == "pass" && bat_samp.result_run != 'pass' %>
+				<% if bat_samp.preparation == 'Genomic sequencing' %>	
+					<tr>
+						<td><%= check_box_tag "bat_samp_ids[]", bat_samp.id %></td>
+						<td><%= bat_samp.name %></td>					
+						<td><%= bat_samp.kapa %></td>
+						<td><%= bat_samp.lib_qubit %></td>
+						<td><%= bat_samp.lib_conc %></td>
+						<td><%= bat_samp.prepared %></td>				
+						<td><%= bat_samp.lib_result %></td>
+					</tr>
+					<% end %>	
+				<% end %>
+			<% end %>
+		</table>
+	</div>
+
+	<table>
+		<tr>
+			<td><a href="#" onclick="Effect.BlindUp('gDNA_samples'); return false;">Hide Genomic sequencing!</a></td>
+			<td><a href="#" onclick="$('gDNA_samples').show(); return false;">Display Genomic sequencing!</a></td>
+		</tr>
+	</table>
+								
+	
+			
+									<!--  End of Lib Prep for gDNA -->
+					
+
+<div id="t_RNA_samples" style=" background:#ccc;">
+  	<span style= "text-align: center">
+	<h4>Listing Passed Libraries for Chip-Seq samples</h4>
+	</span>
+	<table>
+				<tr>
+					<th></th>
+					<th>Sample Name</th>
+					<th>Kapa</th>
+					<th>Qubit</th>
+					<th>Conc</th>
+					<th>Prepared on</th>
+					<th>Lib Result</th>
+				</tr>
+		<% @bat_samp.each do |bat_samp| %>
+			<% if bat_samp.lib_result == "pass" && bat_samp.result_run != 'pass' %>
+				<% if bat_samp.preparation == 'Chip-Seq' %>	
+				<tr>
+					<td><%= check_box_tag "bat_samp_ids[]", bat_samp.id %></td>
+					<td><%= bat_samp.name %></td>					
+					<td><%= bat_samp.kapa %></td>
+					<td><%= bat_samp.lib_qubit %></td>
+					<td><%= bat_samp.lib_conc %></td>
+					<!--  Change the format of the date to be displayed -->
+					<td><%= bat_samp.prepared %></td>				
+					<td><%= bat_samp.lib_result %></td>
+				</tr>
+				<% end %>	
+			<% end %>
+		<% end %>
+	</table> 									
+
+</div>
+<table>
+	<tr>
+		<td><a href="#" onclick="Effect.BlindUp('t_RNA_samples'); return false;">Hide Chip-Seq!</a></td>
+		<td><a href="#" onclick="$('t_RNA_samples').show(); return false;">Display Chip-Seq!</a></td>
+	</tr>
+</table>
+
+
+			<!--  End of Lib Prep for Chip Seq -->
+
+
+<div id="t_RNA_samples" style="background:#ccc;">
+	<span style= "text-align: center">
+	<h4>Listing Passed QCs for small RNA</h4>
+	</span>
+	<table>
+					<tr>
+						<th></th>
+						<th>Sample Name</th>
+						<th>Kapa</th>
+						<th>Qubit</th>
+						<th>Conc</th>
+						<th>Prepared on</th>
+						<th>Lib Result</th>
+					</tr>
+		<% @bat_samp.each do |bat_samp| %>
+			<% if bat_samp.result == "pass" %>
+				<% if bat_samp.preparation == 'small RNA' %>	
+						<tr>
+							<td><%= check_box_tag "bat_samp_ids[]", bat_samp.id %></td>
+							<td><%= bat_samp.name %></td>					
+							<td><%= bat_samp.kapa %></td>
+							<td><%= bat_samp.lib_qubit %></td>
+							<td><%= bat_samp.lib_conc %></td>
+							<!--  Change the format of the date to be displayed -->
+							<td><%= bat_samp.prepared %></td>				
+							<td><%= bat_samp.lib_result %></td>
+						</tr>
+				<% end %>
+			<% end %>
+		<% end %>
+	</table>
+</div>
+<table>
+	<tr>
+		<td><a href="#" onclick="Effect.BlindUp('t_RNA_samples'); return false;">Hide small RNA!</a></td>
+		<td><a href="#" onclick="$('t_RNA_samples').show(); return false;">Display small RNA!</a></td>
+	</tr>
+</table>
+	<!--  End of Lib Prep for small RNA -->
+
+<p><%= submit_tag "Add Run Results" %></p>
+<p><%= link_to 'Back to sample listings', samples_path %></p>
+<% end %>

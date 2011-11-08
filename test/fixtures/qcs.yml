@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  sample_id: 1
+  conc: 9.99
+  ratio1: 9.99
+  ratio2: 9.99
+  agilent: 9.99
+  qubit: 9.99
+
+two:
+  sample_id: 1
+  conc: 9.99
+  ratio1: 9.99
+  ratio2: 9.99
+  agilent: 9.99
+  qubit: 9.99

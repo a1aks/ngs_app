@@ -1,0 +1,27 @@
+<span style= "text-align: center">
+<h2>Adding QC group for <%= @sample.sample_type %></h2>
+</span>
+
+<% form_for @qc, :url => {:action => :create, :id => @sample.id } do |f| -%>
+<div id="table">
+	<p>
+		<span class="col1"><strong>Sample Name</strong></span>
+		<span class="col2"><strong>Conc</strong> </span>
+		<span class="col3"> <strong>260/280 </strong></span>
+		<span class="col4"><strong> 260/230</strong> </span>
+		<span class="col5"> <strong>Agilent</strong> </span>
+		<span class="col6"> <strong>Qubit</strong> </span>
+		<span class="col3"> <strong>Result</strong></span>
+	</p><br \>
+	<p>
+		<span class="col1"><%= @sample.name %></span>
+		<span class="col2"><%= f.text_field :conc, :index => nil, :size => 8 %></span>
+		<span class="col3"> <%= f.text_field :ratio1, :index => nil, :size => 8 %></span>
+		<span class="col4"> <%= f.text_field :ratio2, :index => nil, :size => 8 %></span>
+		<span class="col5"> <%= f.text_field :agilent, :index => nil, :size => 8 %> </span>
+		<span class="col6"> <%= f.text_field :qubit, :index => nil, :size => 8 %> </span>
+		<span class="col3"> <%= f.select :result, [['Pass','pass'],['Fail','fail']] %></span>
+	</p>
+</div><br \> <!-- eof #table -->
+	
+<% end %>

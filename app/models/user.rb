@@ -1,6 +1,10 @@
 require 'digest'
 
 class User < ActiveRecord::Base
+  # Associations 
+  has_many :batches
+  
+  # Accessor Methods
   attr_accessor :password
   attr_accessible :name, :email, :password, :password_confirmation
   
@@ -35,7 +39,15 @@ class User < ActiveRecord::Base
       user = find_by_email(email)
       return nil  if user.nil?
       return user if user.has_password?(submitted_password)
-    end
+  end
+    
+  #   forgot_password
+  def forgot_password!
+    new_pass = User.random_string(10)
+    self.password = self.password_confirmation = new_pass
+    self.save
+    UserMailer.deliver_forgotten_password(self, new_pass)
+  end
   
   private 
   
@@ -58,5 +70,15 @@ end
   def secure_hash(string)
     Digest::SHA2.hexdigest(string)
   end
+  
+  # Random_string method
+  
+  def self.random_string(len)
+     #generate a random password consisting of strings and digits
+     chars = ("a".."z").to_a + ("A".."Z").to_a + ("0".."9").to_a
+     newpass = ""
+     1.upto(len) { |i| newpass << chars[rand(chars.size-1)] }
+     return newpass
+   end
 end
 
