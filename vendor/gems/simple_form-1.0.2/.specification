@@ -1,0 +1,128 @@
+--- !ruby/object:Gem::Specification 
+name: simple_form
+version: !ruby/object:Gem::Version 
+  hash: 19
+  prerelease: false
+  segments: 
+  - 1
+  - 0
+  - 2
+  version: 1.0.2
+platform: ruby
+authors: 
+- "Jos\xC3\xA9 Valim"
+- "Carlos Ant\xC3\xB4nio"
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2010-07-23 00:00:00 +01:00
+default_executable: 
+dependencies: []
+
+description: Forms made easy!
+email: contact@plataformatec.com.br
+executables: []
+
+extensions: []
+
+extra_rdoc_files: 
+- README.rdoc
+files: 
+- generators/simple_form_install/USAGE
+- generators/simple_form_install/simple_form_install_generator.rb
+- generators/simple_form_install/templates/simple_form.rb
+- init.rb
+- lib/simple_form.rb
+- lib/simple_form/action_view_extensions/builder.rb
+- lib/simple_form/action_view_extensions/form_helper.rb
+- lib/simple_form/action_view_extensions/instance_tag.rb
+- lib/simple_form/components.rb
+- lib/simple_form/components/errors.rb
+- lib/simple_form/components/hints.rb
+- lib/simple_form/components/labels.rb
+- lib/simple_form/components/wrapper.rb
+- lib/simple_form/form_builder.rb
+- lib/simple_form/i18n_cache.rb
+- lib/simple_form/inputs.rb
+- lib/simple_form/inputs/base.rb
+- lib/simple_form/inputs/block_input.rb
+- lib/simple_form/inputs/collection_input.rb
+- lib/simple_form/inputs/date_time_input.rb
+- lib/simple_form/inputs/hidden_input.rb
+- lib/simple_form/inputs/mapping_input.rb
+- lib/simple_form/inputs/priority_input.rb
+- lib/simple_form/inputs/text_field_input.rb
+- lib/simple_form/locale/en.yml
+- lib/simple_form/map_type.rb
+- lib/simple_form/version.rb
+- README.rdoc
+- test/action_view_extensions/builder_test.rb
+- test/action_view_extensions/form_helper_test.rb
+- test/components/error_test.rb
+- test/components/hint_test.rb
+- test/components/label_test.rb
+- test/form_builder_test.rb
+- test/inputs_test.rb
+- test/simple_form_test.rb
+- test/support/country_select/init.rb
+- test/support/country_select/install.rb
+- test/support/country_select/lib/country_select.rb
+- test/support/country_select/uninstall.rb
+- test/support/misc_helpers.rb
+- test/support/mock_controller.rb
+- test/support/mock_response.rb
+- test/support/models.rb
+- test/test_helper.rb
+has_rdoc: true
+homepage: http://github.com/plataformatec/simple_form
+licenses: []
+
+post_install_message: 
+rdoc_options: 
+- --charset=UTF-8
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 1.3.7
+signing_key: 
+specification_version: 3
+summary: Forms made easy!
+test_files: 
+- test/action_view_extensions/builder_test.rb
+- test/action_view_extensions/form_helper_test.rb
+- test/components/error_test.rb
+- test/components/hint_test.rb
+- test/components/label_test.rb
+- test/form_builder_test.rb
+- test/inputs_test.rb
+- test/simple_form_test.rb
+- test/support/country_select/init.rb
+- test/support/country_select/install.rb
+- test/support/country_select/lib/country_select.rb
+- test/support/country_select/uninstall.rb
+- test/support/misc_helpers.rb
+- test/support/mock_controller.rb
+- test/support/mock_response.rb
+- test/support/models.rb
+- test/test_helper.rb
